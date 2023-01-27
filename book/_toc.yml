@@ -1,0 +1,23 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro.ipynb
+chapters:
+  - file: acronyms.md
+    title: Acronyms
+  - file: S1_portals.ipynb
+    title: Sentinel-1 products
+  - file: S2L1C_portals.ipynb
+    title: Sentinel-2 Level-1C products
+  - file: S2L2A_portals.ipynb
+    title: Sentinel-2 Level-2A products
+  - file: S3_portals.ipynb
+    title: Sentinel-3 products
+  - file: S5p_portals.ipynb
+    title: Sentinel-5p products
+  - file: user_downloads.ipynb
+    title: Monitoring data downloads from colhub portals
+  - file: volumes.ipynb
+    title: Data volumes for NBS
+
