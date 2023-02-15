@@ -37,27 +37,36 @@ logsdir = pathlib.Path('../data')
 
 
 def get_product_type(product):
-    if product[0:2] == 'S1':
-        type = product.split('_')[2]
-    elif product[0:2] == 'S2':
-        type = product.split('_')[1]
-        if not type.startswith('M'):
-            type = 'Unknown'
-    elif product[0:2] == 'S3':
-        tmp = product.split('_')
-        if tmp[1] == 'SL':
-            type = 'SLSTR_L' + tmp[2]
-        elif tmp[1] == 'SR':
-            type = 'SRAL_L' + tmp[2]
-        elif tmp[1] == 'OL':
-            type = 'OLCI_L' + tmp[2]
-        else:
-            type = 'Unknown'
-    else:
-        type = 'Unknown'
-    if 'DTERRENG' in product:
-        type = type + '_DTERRENG'
-    return type
+    """ From a product title, get it's type """
+    tipe = 'Unknown'
+    try:
+        if product[0:2] == 'S1':
+            tipe = product.split('_')[2]
+        elif product[0:2] == 'S2':
+            tipe = product.split('_')[1]
+            if not tipe.startswith('M'):
+                tipe = 'Unknown'
+        elif product[0:2] == 'S3':
+            tmp = product.split('_')
+            if tmp[1] == 'SL':
+                tipe = 'SLSTR_L' + tmp[2]
+            elif tmp[1] == 'SR':
+                tipe = 'SRAL_L' + tmp[2]
+            elif tmp[1] == 'OL':
+                tipe = 'OLCI_L' + tmp[2]
+            elif tmp[1] == 'SY':
+                tipe = 'SYN_L' + tmp[2]
+        elif product[0:2] == 'S5':
+            tmp = product.split('_')
+            if tmp[1] == 'OFFL':
+                tipe = 'OFFL_' + tmp[2]
+            elif tmp[1] == 'NRTI':
+                tipe = 'NRTI_' + tmp[2]
+        if 'DTERRENG' in product:
+            tipe = tipe + '_DTERRENG'
+    except TypeError:
+        tipe = 'Unknown'
+    return tipe
 
 
 # In[5]:
@@ -88,6 +97,7 @@ nbs_global = get_data(csvfile)
 
 # Number of products downloaded per day
 nbs_global.groupby(nbs_global.index.date).count()['product_type'].plot(ylabel='Number of products', rot=70)
+plt.grid(True)
 
 
 # The same data is also represented below, with a difference. This time the data is not accounted by numer, but by volume. Although both graphs show similar trends, they are not exactly equal due to the variability in the ratio volume per product. For instance, the seasonality of optical products could have an impact in the total volume of products.
@@ -98,6 +108,7 @@ nbs_global.groupby(nbs_global.index.date).count()['product_type'].plot(ylabel='N
 # Volume downloaded per day (in Tb)
 total = nbs_global.groupby(nbs_global.index.date).sum()['size']/1024/1024/1024/1024
 total.plot(ylabel='Volume downloaded in Tb', rot=70)
+plt.grid(True)
 
 
 # The table below is also interesting. It shows the amount of products downloaded for each the different Sentinel products. As expected, S1 and S2 are the most used Sentinels. S3 is slightly used, while S5p is not used.
@@ -127,6 +138,7 @@ col_table2
 
 # Number of unique users that downloaded each day
 nbs_global.groupby(nbs_global.index.date).agg({"user": "nunique"}).plot(ylabel='Number of unique users')
+plt.grid(True)
 
 
 # ## Portal: colhub-archive.met.no
@@ -145,6 +157,7 @@ nbs_AOI = get_data(csvfile)
 
 # Number of products downloaded per day
 nbs_AOI.groupby(nbs_AOI.index.date).count()['product_type'].plot(ylabel='Number of products', rot=70)
+plt.grid(True)
 
 
 # As explained and shown in the previous section, the total volume downloaded is also shown in the graphic below.  
@@ -155,6 +168,7 @@ nbs_AOI.groupby(nbs_AOI.index.date).count()['product_type'].plot(ylabel='Number 
 # Volume downloaded per day (in Tb)
 total = nbs_AOI.groupby(nbs_AOI.index.date).sum()['size']/1024/1024/1024/1024
 total.plot(ylabel='Volume downloaded in Tb', rot=70)
+plt.grid(True)
 
 
 # It is still interesting to see the number of products downloaded per product type. As shown in the previous section, S1 and S2 still are the most popular Sentinels.
@@ -177,13 +191,14 @@ col_table4 = nbs_AOI.groupby([nbs_AOI.index.year, nbs_AOI.index.month_name()]).s
 col_table4
 
 
-# The last graphic show the number of users accessing and downloading data from the portal. Again, the dicontinuity in numbers of users it is not a sign of the portal performance.
+# The last graphic show the number of users accessing and downloading data from the portal. Again, the discontinuity in numbers of users it is not a sign of the portal performance.
 
 # In[17]:
 
 
 # Number of unique users that downloaded each day
 nbs_AOI.groupby(nbs_AOI.index.date).agg({"user": "nunique"}).plot(ylabel='Number of unique users', rot=70)
+plt.grid(True)
 
 
 # In[ ]:

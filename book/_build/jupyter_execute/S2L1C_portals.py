@@ -65,7 +65,7 @@ def plot_stats(df, plot_max=False, plot_BE=True):
     fig.autofmt_xdate()
     
     plt.legend(loc="best")
-    
+    plt.grid(True)
     plt.show()
 
 
@@ -85,6 +85,7 @@ def plot_missing(df, plot_max=False):
     #missing_perc_1 = ((df['scihub'] - df['colhub_global'])/df['scihub']).iloc[-1]
     
     plt.figtext(-0.4,0.3, 'Difference between \nscihub and colhub \n (last day) \n\n {:d} products missing \n\n ~{:.1%} of the products'.format(missing, missing_perc, 1/3), color=color2)
+    plt.grid(True)
     plt.show()
 
 
@@ -265,6 +266,7 @@ def plot_stats_logs(synchronized, deleted=None, fscanner=None, plot_max=False):
     ax.set_ylim([0, None]) 
     ax.set_ylabel('Timeliness in hours', color=color2)
     ax.tick_params('y', colors=color2)
+    plt.grid(True)
     #plt.legend(loc="lower left")
     
     # Plot number of products
@@ -310,8 +312,8 @@ def plot_stats_logs(synchronized, deleted=None, fscanner=None, plot_max=False):
 def plot_stats_logs_daily(synchronized, deleted=None, fscanner=None, plot_max=False):
    
     # Simple stats that will be annotations on the plot
-    median = int(synchronized['number'].iloc[0:-2].median())
-    last = int(synchronized['number'].iloc[-1])
+    median = synchronized['number'].iloc[0:-2].median()
+    last = synchronized['number'].iloc[-1]
     t_median = synchronized['timeliness'].iloc[0:-2].median()
     t_last = synchronized['timeliness'].iloc[-1]
     if fscanner is not None:
@@ -331,6 +333,7 @@ def plot_stats_logs_daily(synchronized, deleted=None, fscanner=None, plot_max=Fa
     ax.set_ylim([0, None]) 
     ax.set_ylabel('Timeliness in hours', color=color2)
     ax.tick_params('y', colors=color2)
+    plt.grid(True)
     #plt.legend(loc="lower left")
     
     # Plot number of products
@@ -394,7 +397,7 @@ def plot_stats_simple(df, plot_max=False):
     ax.xaxis.set_major_locator(mdates.DayLocator(bymonthday=days))
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))
     fig.autofmt_xdate()
-    
+    plt.grid(True)
     plt.show()
 
 

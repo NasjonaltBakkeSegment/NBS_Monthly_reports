@@ -88,7 +88,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   NBS monthly report
+   An Overview
   </a>
  </li>
 </ul>
@@ -303,19 +303,13 @@
 <p>The first portal to analyze is <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>. The target of the analysis is to check the amount of data downloaded by users, but also the number of users accessing the datahub. Below the historical amount of data per day is represented.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Number of products&#39;&gt;
-</pre></div>
-</div>
-<img alt="_images/user_downloads_10_1.png" src="_images/user_downloads_10_1.png" />
+<img alt="_images/user_downloads_10_0.png" src="_images/user_downloads_10_0.png" />
 </div>
 </div>
 <p>The same data is also represented below, with a difference. This time the data is not accounted by numer, but by volume. Although both graphs show similar trends, they are not exactly equal due to the variability in the ratio volume per product. For instance, the seasonality of optical products could have an impact in the total volume of products.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Volume downloaded in Tb&#39;&gt;
-</pre></div>
-</div>
-<img alt="_images/user_downloads_12_1.png" src="_images/user_downloads_12_1.png" />
+<img alt="_images/user_downloads_12_0.png" src="_images/user_downloads_12_0.png" />
 </div>
 </div>
 <p>The table below is also interesting. It shows the amount of products downloaded for each the different Sentinel products. As expected, S1 and S2 are the most used Sentinels. S3 is slightly used, while S5p is not used.</p>
@@ -336,6 +330,9 @@ S3         OLCI_L1                73
            SLSTR_L2                3
            SRAL_L1                16
            SRAL_L2                25
+           SYN_L2                  5
+S5         NRTI_L2              2043
+           OFFL_L1B                2
 dtype: int64
 </pre></div>
 </div>
@@ -345,22 +342,22 @@ dtype: int64
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>download_time  download_time
-2021           10                 7.588164
-               11               158.652554
-               12                57.664394
-2022           1                 36.396767
-               2                 29.782247
-               3                 39.854433
-               4                 46.765597
-               5                 51.218824
+2021           10                 7.588303
+               11               158.654049
+               12                57.675128
+2022           1                 36.406545
+               2                 29.798405
+               3                 39.869718
+               4                 46.768604
+               5                 51.219186
                6                 42.277098
-               7                 44.552245
-               8                 42.826523
-               9                 30.426568
-               10                30.238427
-               11                68.651029
-               12                25.648840
-2023           1                 11.852366
+               7                 44.565096
+               8                 42.852304
+               9                 30.441359
+               10                30.245704
+               11                68.659549
+               12                25.659783
+2023           1                 11.861707
 Name: size, dtype: float64
 </pre></div>
 </div>
@@ -369,10 +366,7 @@ Name: size, dtype: float64
 <p>The number of users accessing and using the datahub is also important to be known. The plot below show the number of users per day. Some variability is represented in its numbers. Nevertheless, <a class="reference external" href="http://colhub.met.no">colhub.met.no</a> is used by 15 to 20 users per day.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Number of unique users&#39;&gt;
-</pre></div>
-</div>
-<img alt="_images/user_downloads_18_1.png" src="_images/user_downloads_18_1.png" />
+<img alt="_images/user_downloads_18_0.png" src="_images/user_downloads_18_0.png" />
 </div>
 </div>
 </div>
@@ -383,19 +377,13 @@ Name: size, dtype: float64
 <p>Similar to <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>, here it is presented the performance of <a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a>. First the number of products downloaded per day. As shown in the plot below, some days the number of products downloaded is null. This is a correct value which is not reflecting the performance of the FE. The archive is not as frequently accessed as <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>. Only those users looking for historical data will used this portal.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Number of products&#39;&gt;
-</pre></div>
-</div>
-<img alt="_images/user_downloads_22_1.png" src="_images/user_downloads_22_1.png" />
+<img alt="_images/user_downloads_22_0.png" src="_images/user_downloads_22_0.png" />
 </div>
 </div>
 <p>As explained and shown in the previous section, the total volume downloaded is also shown in the graphic below.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Volume downloaded in Tb&#39;&gt;
-</pre></div>
-</div>
-<img alt="_images/user_downloads_24_1.png" src="_images/user_downloads_24_1.png" />
+<img alt="_images/user_downloads_24_0.png" src="_images/user_downloads_24_0.png" />
 </div>
 </div>
 <p>It is still interesting to see the number of products downloaded per product type. As shown in the previous section, S1 and S2 still are the most popular Sentinels.</p>
@@ -412,6 +400,7 @@ S2         MSIL1C              6662
 S3         OLCI_L1                1
            SRAL_L1                4
            SRAL_L2              158
+S5         OFFL_L2                1
 dtype: int64
 </pre></div>
 </div>
@@ -427,7 +416,7 @@ dtype: int64
                August            0.874257
                December          0.908673
                February          9.514969
-               January           7.210657
+               January           7.210722
                July              0.771705
                June              3.787335
                March            13.999207
@@ -441,13 +430,10 @@ Name: size, dtype: float64
 </div>
 </div>
 </div>
-<p>The last graphic show the number of users accessing and downloading data from the portal. Again, the dicontinuity in numbers of users it is not a sign of the portal performance.</p>
+<p>The last graphic show the number of users accessing and downloading data from the portal. Again, the discontinuity in numbers of users it is not a sign of the portal performance.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;Number of unique users&#39;&gt;
-</pre></div>
-</div>
-<img alt="_images/user_downloads_30_1.png" src="_images/user_downloads_30_1.png" />
+<img alt="_images/user_downloads_30_0.png" src="_images/user_downloads_30_0.png" />
 </div>
 </div>
 </div>

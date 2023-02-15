@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NBS monthly report &#8212; NBS monthly report</title>
+    <title>An Overview &#8212; NBS monthly report</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -87,7 +87,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
-   NBS monthly report
+   An Overview
   </a>
  </li>
 </ul>
@@ -248,6 +248,11 @@
    BackEnds and FrontEnds
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-summary">
+   Quick summary
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -258,7 +263,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>NBS monthly report</h1>
+                <h1>An Overview</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -283,6 +288,11 @@
    BackEnds and FrontEnds
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quick-summary">
+   Quick summary
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -296,11 +306,16 @@
 <div class="cell_output docutils container">
 </div>
 </div>
-<div class="section" id="nbs-monthly-report">
-<h1>NBS monthly report<a class="headerlink" href="#nbs-monthly-report" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="an-overview">
+<h1>An Overview<a class="headerlink" href="#an-overview" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="the-nbs-project">
 <h2>The NBS project<a class="headerlink" href="#the-nbs-project" title="Permalink to this headline">¶</a></h2>
-<p>The European Space Agency (ESA) is in charge for the distribution of data from the Sentinel satellite constellation. In order to maintain a reliable and sustainable data hub, the creation and operation of multiples data hubs is necessary. With the purpose of keeping and maintaining a reliable and online source of data from the ESA Sentinel constellation for an Area Of Interest (AOI) covering Norway, the Norwegian Space Agency (NOSA) funded the National Bakke Segment (NBS) project.</p>
+<p>The European Space Agency (ESA) is in charge for the distribution of data from the Sentinel satellite constellation. In order to maintain a reliable and sustainable data hub, the creation and operation of multiples data hubs is necessary. With the purpose of keeping and maintaining a reliable and online source of data from the ESA Sentinel constellation for an Area Of Interest (AOI) covering Norway, the Norwegian Space Agency (NOSA) funded the National Bakke Segment (NBS) project. The map below is indicating the AOI in red.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/intro_2_0.png" src="_images/intro_2_0.png" />
+</div>
+</div>
 <p>Therefore, MET Norway was contracted for the operation of the NBS data. The NBS is implementd as a part of the operational infrastructure at MET Norway. As so it follows the normal procedures for planning, implementation and testing , and operationalisation. User access to the NBS is configured according to NOSA requirements. This includes the use of ESA’s DHuS software for synchronization between ESA and user accessibility.</p>
 <p>The present report is part of MET Norway duties to inform about its perfomance as operator of the NBS. Monthly reports will be created mothly to regularly comunicate the status of MET Norway’s NBS.</p>
 </div>
@@ -312,6 +327,84 @@
 <h2>BackEnds and FrontEnds<a class="headerlink" href="#backends-and-frontends" title="Permalink to this headline">¶</a></h2>
 <p>As operator of NBS, the source of Sentinel data is ESA; and ESA spreads the Sentinel data trough the data hub Scihub (<a class="reference external" href="http://scihub.copernicus.eu">scihub.copernicus.eu</a>).Scihub is ESA’s FrontEnd (FE) for Sentinel data accesibility. MET Norway uses the DHS software for synchronization and creation of other FrontEnds. During the synchronization process a BackEnd (BE) is created. MET Norway is also running two FEs, <a class="reference external" href="http://colhub.met.no">colhub.met.no</a> and <a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a>. The colhub FE includes or will include all the products mentioned for Sentinel global products plus S3 marine products from Copernicus, S1 products from the Kongsberg Satellite Services (KSAT), and S2 Digital Elevation Model (DEM). The colhub-archive FE includes data from S1, S2L1C, S2L2A, S2DEM, S3, S5p products for the AOI. An important distiction between both FEs is that colhub-archive will allways maintain available online all the products for the AOI.</p>
 <p>In order to maintain an accountability on products synchronized from ESA’s Scihub and available for users at the different FEs, it is necessary to understand the architecture of MET Norway’s DHR.</p>
+</div>
+<div class="section" id="quick-summary">
+<h2>Quick summary<a class="headerlink" href="#quick-summary" title="Permalink to this headline">¶</a></h2>
+<p>The table below shows a short overview of the NBS preformance operation during the last 30 days. The three different FEs and the BE are included. All columns represents the number of products in each portal excepting the last 3 columns. Those 3 columns represents the data flow from MET Norway to users through the portals where Volumes are measured in Tb.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Portals</p></th>
+<th class="text-align:center head"><p>S1</p></th>
+<th class="text-align:center head"><p>S2L1C</p></th>
+<th class="text-align:center head"><p>S2L2A</p></th>
+<th class="text-align:center head"><p>S3</p></th>
+<th class="text-align:center head"><p>S5p</p></th>
+<th class="text-align:center head"><p>Nb of users</p></th>
+<th class="text-align:center head"><p>Nb of products</p></th>
+<th class="text-align:center head"><p>Volume</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><a class="reference external" href="http://colhub.met.no">colhub.met.no</a></p></td>
+<td class="text-align:center"><p><span class="pasted-text">7217</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">1626</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">3838</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">13815</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">7128</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">19</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">8945</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">4.916</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a></p></td>
+<td class="text-align:center"><p><span class="pasted-text">8312</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">1613</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">3814</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">13594</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">7012</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">2</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">75</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">0.094</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><a class="reference external" href="http://scihub.copernicus.eu">scihub.copernicus.eu</a></p></td>
+<td class="text-align:center"><p><span class="pasted-text">7217</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">4191</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">4175</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">19327</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">7131</span></p></td>
+<td class="text-align:center"><p>-</p></td>
+<td class="text-align:center"><p>-</p></td>
+<td class="text-align:center"><p>-</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>MET Norway BE</p></td>
+<td class="text-align:center"><p><span class="pasted-text">2174</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">168</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">1379</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">2690</span></p></td>
+<td class="text-align:center"><p><span class="pasted-text">2295</span></p></td>
+<td class="text-align:center"><p>-</p></td>
+<td class="text-align:center"><p>-</p></td>
+<td class="text-align:center"><p>-</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>Finally, the total amount of disk space dedicated to the NBS project, including either products in SAFE and NetCDF formats, represents 3272.8793250643885 Tb.</p>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>Due to tracking the data ingested and produced for the NBS project in the last year it is possible to forcast the upcoming need for disk space. As long as data flows follows the same pattern than last year, in 6 months the total disk space will grow until 4211.601594795664 Tb; while in 12 months it is forecasted to become 4409.0885917219875 Tb.</p>
+</div>
+</div>
 </div>
 <div class="toctree-wrapper compound">
 </div>
