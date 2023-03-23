@@ -98,6 +98,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="summary.html">
+   Quick summary
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="S1_portals.html">
    Sentinel-1 products
   </a>
@@ -248,11 +253,6 @@
    BackEnds and FrontEnds
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quick-summary">
-   Quick summary
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -286,11 +286,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#backends-and-frontends">
    BackEnds and FrontEnds
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quick-summary">
-   Quick summary
   </a>
  </li>
 </ul>
@@ -327,84 +322,6 @@
 <h2>BackEnds and FrontEnds<a class="headerlink" href="#backends-and-frontends" title="Permalink to this headline">¶</a></h2>
 <p>As operator of NBS, the source of Sentinel data is ESA; and ESA spreads the Sentinel data trough the data hub Scihub (<a class="reference external" href="http://scihub.copernicus.eu">scihub.copernicus.eu</a>).Scihub is ESA’s FrontEnd (FE) for Sentinel data accesibility. MET Norway uses the DHS software for synchronization and creation of other FrontEnds. During the synchronization process a BackEnd (BE) is created. MET Norway is also running two FEs, <a class="reference external" href="http://colhub.met.no">colhub.met.no</a> and <a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a>. The colhub FE includes or will include all the products mentioned for Sentinel global products plus S3 marine products from Copernicus, S1 products from the Kongsberg Satellite Services (KSAT), and S2 Digital Elevation Model (DEM). The colhub-archive FE includes data from S1, S2L1C, S2L2A, S2DEM, S3, S5p products for the AOI. An important distiction between both FEs is that colhub-archive will allways maintain available online all the products for the AOI.</p>
 <p>In order to maintain an accountability on products synchronized from ESA’s Scihub and available for users at the different FEs, it is necessary to understand the architecture of MET Norway’s DHR.</p>
-</div>
-<div class="section" id="quick-summary">
-<h2>Quick summary<a class="headerlink" href="#quick-summary" title="Permalink to this headline">¶</a></h2>
-<p>The table below shows a short overview of the NBS preformance operation during the last 30 days. The three different FEs and the BE are included. All columns represents the number of products in each portal excepting the last 3 columns. Those 3 columns represents the data flow from MET Norway to users through the portals where Volumes are measured in Tb.</p>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p>Portals</p></th>
-<th class="text-align:center head"><p>S1</p></th>
-<th class="text-align:center head"><p>S2L1C</p></th>
-<th class="text-align:center head"><p>S2L2A</p></th>
-<th class="text-align:center head"><p>S3</p></th>
-<th class="text-align:center head"><p>S5p</p></th>
-<th class="text-align:center head"><p>Nb of users</p></th>
-<th class="text-align:center head"><p>Nb of products</p></th>
-<th class="text-align:center head"><p>Volume</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p><a class="reference external" href="http://colhub.met.no">colhub.met.no</a></p></td>
-<td class="text-align:center"><p><span class="pasted-text">7217</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">1626</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">3838</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">13815</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">7128</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">19</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">8945</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">4.916</span></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:center"><p><a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a></p></td>
-<td class="text-align:center"><p><span class="pasted-text">8312</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">1613</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">3814</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">13594</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">7012</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">2</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">75</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">0.094</span></p></td>
-</tr>
-<tr class="row-even"><td class="text-align:center"><p><a class="reference external" href="http://scihub.copernicus.eu">scihub.copernicus.eu</a></p></td>
-<td class="text-align:center"><p><span class="pasted-text">7217</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">4191</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">4175</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">19327</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">7131</span></p></td>
-<td class="text-align:center"><p>-</p></td>
-<td class="text-align:center"><p>-</p></td>
-<td class="text-align:center"><p>-</p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:center"><p>MET Norway BE</p></td>
-<td class="text-align:center"><p><span class="pasted-text">2174</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">168</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">1379</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">2690</span></p></td>
-<td class="text-align:center"><p><span class="pasted-text">2295</span></p></td>
-<td class="text-align:center"><p>-</p></td>
-<td class="text-align:center"><p>-</p></td>
-<td class="text-align:center"><p>-</p></td>
-</tr>
-</tbody>
-</table>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<p>Finally, the total amount of disk space dedicated to the NBS project, including either products in SAFE and NetCDF formats, represents 3272.8793250643885 Tb.</p>
-</div>
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<p>Due to tracking the data ingested and produced for the NBS project in the last year it is possible to forcast the upcoming need for disk space. As long as data flows follows the same pattern than last year, in 6 months the total disk space will grow until 4211.601594795664 Tb; while in 12 months it is forecasted to become 4409.0885917219875 Tb.</p>
-</div>
-</div>
 </div>
 <div class="toctree-wrapper compound">
 </div>

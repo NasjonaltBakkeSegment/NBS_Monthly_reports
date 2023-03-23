@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/home/albertor/anaconda3/envs/jupyter/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/home/albertor/anaconda3/envs/jupyter/lib/python3.7/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/albertor/anaconda3/envs/jupyter/lib/python3.7/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/albertor/anaconda3/envs/jupyter/lib/python3.7/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/albertor/anaconda3/envs/jupyter/lib/python3.7/asyncio/base_events.py", line 583, in run_until_complete
+    return future.result()
+  File "/home/albertor/anaconda3/envs/jupyter/lib/python3.7/site-packages/nbclient/client.py", line 664, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/home/albertor/anaconda3/envs/jupyter/lib/python3.7/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/albertor/anaconda3/envs/jupyter/lib/python3.7/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+md("Due to tracking the data ingested and produced for the NBS project in the last year it is possible to forcast the upcoming need for disk space. As long as data flows follows the same pattern than last year, in 6 months the total disk space will grow until {} Tb; while in 12 months it is forecasted to become {} Tb.".format(int(after_6m), int(after_year))
+------------------
+
+[0;36m  File [0;32m"/tmp/ipykernel_66282/562910422.py"[0;36m, line [0;32m1[0m
+[0;31m    md("Due to tracking the data ingested and produced for the NBS project in the last year it is possible to forcast the upcoming need for disk space. As long as data flows follows the same pattern than last year, in 6 months the total disk space will grow until {} Tb; while in 12 months it is forecasted to become {} Tb.".format(int(after_6m), int(after_year))[0m
+[0m                                                                                                                                                                                                                                                                                                                                                                           ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m unexpected EOF while parsing
+
+SyntaxError: unexpected EOF while parsing (562910422.py, line 1)
+

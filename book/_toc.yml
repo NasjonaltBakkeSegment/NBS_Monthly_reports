@@ -6,6 +6,8 @@ root: intro.ipynb
 chapters:
   - file: acronyms.md
     title: Acronyms
+  - file: summary.ipynb
+    title: Quick summary
   - file: S1_portals.ipynb
     title: Sentinel-1 products
   - file: S2L1C_portals.ipynb

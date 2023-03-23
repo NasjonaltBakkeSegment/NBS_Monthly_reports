@@ -70,7 +70,7 @@ total_vol_be = all_colhub["volume"].sum()/1024
 # In[7]:
 
 
-md("The total amount of Sentinel products for the AOI, located in the AOI BE, represents {} Tb".format(total_vol_be))
+md("The total amount of Sentinel products for the AOI, located in the AOI BE, represents {} Tb".format(int(total_vol_be)))
 
 
 # In[8]:
@@ -130,7 +130,7 @@ total_nc = all_netcdf.sum()['volume']/1024
 # In[14]:
 
 
-md("The total amount of Sentinel-1 and Sentinel-2 products for the AOI transformed to NetCDF represents {} Tb".format(total_nc))
+md("The total amount of Sentinel-1 and Sentinel-2 products for the AOI transformed to NetCDF represents {} Tb".format(int(total_nc)))
 
 
 # In[15]:
@@ -165,7 +165,7 @@ total_total = total_nc + total_vol_be
 # In[18]:
 
 
-md("Finally, the total amount of disk space dedicated to the NBS project, including either products in SAFE and NetCDF formats, represents {} Tb".format(total_total))
+md("Finally, the total amount of disk space dedicated to the NBS project, including either products in SAFE and NetCDF formats, represents {} Tb".format(int(total_total)))
 
 
 # In[19]:
