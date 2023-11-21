@@ -11,7 +11,7 @@ filepaths=$(yq eval '.csv_files | keys | .[]' "$yaml_file")
 while IFS= read -r directory; do
     for file in $(yq eval ".csv_files[\"$directory\"] | .[]" "$yaml_file"); do
         filepath="${directory}${file}"
-        scp "$filepath" "$current_dir"/../data/
+        rsync -avz -e ssh "$filepath" "$current_dir"/../data/
         echo "$filepath"
     done
 done <<< "$filepaths"
