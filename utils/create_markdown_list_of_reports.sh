@@ -1,7 +1,10 @@
 #!/bin/bash
 
-reports="../reports/"        # Change this to your destination folder path
-output_file="../book/previous_reports.md"   # Existing Markdown file name
+# Get the directory of the currently executing script
+current_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+reports="$current_dir/../reports/"        # Change this to your destination folder path
+output_file="$current_dir/../book/previous_reports.md"   # Existing Markdown file name
 
 # Change directory to the destination folder
 cd "$reports" || exit

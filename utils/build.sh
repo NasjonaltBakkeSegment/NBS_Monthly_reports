@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# Get the directory of the currently executing script
+current_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Define the directory paths
-source_pdf="../book/_build/pdf/"
-destination="../reports/"
+source_pdf="$current_dir/../book/_build/pdf/"
+destination="$current_dir/../reports/"
+book="$current_dir/../book/"
 
 # Store today's date in a variable
 current_date=$(date +"%Y-%m-%d")
@@ -11,7 +15,7 @@ current_date=$(date +"%Y-%m-%d")
 mkdir -p "$destination"
 
 # Build the PDF report
-jb build ../book/ --builder pdfhtml
+jb build $book --builder pdfhtml
 sleep 5
 
 # Check if the source PDF file exists, then move and rename it
@@ -23,10 +27,10 @@ else
 fi
 
 # Creating page to list previous reports including links to download PDFs
-source create_markdown_list_of_reports.sh
+source $current_dir/create_markdown_list_of_reports.sh
 
 # Building again to include the link to the new PDF report
-jb build ../book/ --builder pdfhtml
+jb build $book --builder pdfhtml
 sleep 5
 if [ -f "${source_pdf}book.pdf" ]; then
     current_date=$(date +"%Y-%m-%d")
@@ -36,4 +40,4 @@ else
 fi
 
 # Build the HTML report
-jb build ../book/
+jb build $book
