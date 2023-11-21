@@ -22,4 +22,6 @@ chapters:
     title: Monitoring data downloads from colhub portals
   - file: volumes.ipynb
     title: Data volumes for NBS
+  - file: previous_reports.md
+    title: Previous reports
 
