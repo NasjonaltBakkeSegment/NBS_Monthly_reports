@@ -15,7 +15,7 @@ current_date=$(date +"%Y-%m-%d")
 mkdir -p "$destination"
 
 # Build the PDF report
-jb build $book --builder pdfhtml
+jb build $book --builder pdflatex
 sleep 5
 
 # Check if the source PDF file exists, then move and rename it
@@ -30,7 +30,7 @@ fi
 source $current_dir/create_markdown_list_of_reports.sh
 
 # Building again to include the link to the new PDF report
-jb build $book --builder pdfhtml
+jb build $book --builder pdflatex
 sleep 5
 if [ -f "${source_pdf}book.pdf" ]; then
     current_date=$(date +"%Y-%m-%d")
