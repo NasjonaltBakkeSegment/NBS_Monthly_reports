@@ -10,4 +10,4 @@ git commit -m "Automatic commit and push after building new report"
 git push origin master
 
 # Publishing the report with GitHub pages
-ghp-import -n -p -f book/_build/html
+ghp-import -n -p -f ../book/_build/html
