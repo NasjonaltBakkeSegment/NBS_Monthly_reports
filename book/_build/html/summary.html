@@ -350,86 +350,11 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ParserError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">44</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="n">col_vol</span> <span class="o">=</span> <span class="n">nbs_30</span><span class="o">.</span><span class="n">sum</span><span class="p">()[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span> <span class="c1">#in Tb</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span> <span class="n">csvfile</span> <span class="o">=</span> <span class="n">logsdir</span> <span class="o">/</span> <span class="s1">&#39;NBS_frontend-AOI_outputs.csv&#39;</span>
-<span class="ne">---&gt; </span><span class="mi">44</span> <span class="n">nbs_AOI</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">45</span> <span class="c1">#nbs_AOI.set_index(&#39;download_time&#39;, inplace=True)</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="n">nbs_AOI</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="nn">Cell In[3], line 25,</span> in <span class="ni">get_data</span><span class="nt">(file)</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">25</span>     <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;download_time&#39;</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="s1">&#39;product&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">,</span> <span class="s1">&#39;download_duration&#39;</span><span class="p">]</span>\
-<span class="g g-Whitespace">     </span><span class="mi">26</span>                         <span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;download_time&#39;</span><span class="p">],</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;download_time&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="n">data</span><span class="p">[</span><span class="s1">&#39;satellite&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;product&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="n">data</span><span class="p">[</span><span class="s1">&#39;product_type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;product&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_product_type</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/util/_decorators.py:211,</span> in <span class="ni">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">210</span>         <span class="n">kwargs</span><span class="p">[</span><span class="n">new_arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_arg_value</span>
-<span class="ne">--&gt; </span><span class="mi">211</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/util/_decorators.py:331,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">325</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">327</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">_format_argument_list</span><span class="p">(</span><span class="n">allow_args</span><span class="p">)),</span>
-<span class="g g-Whitespace">    </span><span class="mi">328</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">find_stack_level</span><span class="p">(),</span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">331</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py:950,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">935</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">936</span>     <span class="n">dialect</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">937</span>     <span class="n">delimiter</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">946</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
-<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">948</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">950</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py:611,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">608</span>     <span class="k">return</span> <span class="n">parser</span>
-<span class="g g-Whitespace">    </span><span class="mi">610</span> <span class="k">with</span> <span class="n">parser</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">611</span>     <span class="k">return</span> <span class="n">parser</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nrows</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py:1778,</span> in <span class="ni">TextFileReader.read</span><span class="nt">(self, nrows)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1771</span> <span class="n">nrows</span> <span class="o">=</span> <span class="n">validate_integer</span><span class="p">(</span><span class="s2">&quot;nrows&quot;</span><span class="p">,</span> <span class="n">nrows</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1772</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1773</span>     <span class="c1"># error: &quot;ParserBase&quot; has no attribute &quot;read&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1774</span>     <span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1775</span>         <span class="n">index</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1776</span>         <span class="n">columns</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1777</span>         <span class="n">col_dict</span><span class="p">,</span>
-<span class="ne">-&gt; </span><span class="mi">1778</span>     <span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">read</span><span class="p">(</span>  <span class="c1"># type: ignore[attr-defined]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1779</span>         <span class="n">nrows</span>
-<span class="g g-Whitespace">   </span><span class="mi">1780</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1781</span> <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1782</span>     <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/c_parser_wrapper.py:230,</span> in <span class="ni">CParserWrapper.read</span><span class="nt">(self, nrows)</span>
-<span class="g g-Whitespace">    </span><span class="mi">228</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">229</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">low_memory</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">230</span>         <span class="n">chunks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">read_low_memory</span><span class="p">(</span><span class="n">nrows</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">231</span>         <span class="c1"># destructive to chunks</span>
-<span class="g g-Whitespace">    </span><span class="mi">232</span>         <span class="n">data</span> <span class="o">=</span> <span class="n">_concatenate_chunks</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/_libs/parsers.pyx:808,</span> in <span class="ni">pandas._libs.parsers.TextReader.read_low_memory</span><span class="nt">()</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/_libs/parsers.pyx:866,</span> in <span class="ni">pandas._libs.parsers.TextReader._read_rows</span><span class="nt">()</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/_libs/parsers.pyx:852,</span> in <span class="ni">pandas._libs.parsers.TextReader._tokenize_rows</span><span class="nt">()</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/_libs/parsers.pyx:1973,</span> in <span class="ni">pandas._libs.parsers.raise_parser_error</span><span class="nt">()</span>
-
-<span class="ne">ParserError</span>: Error tokenizing data. C error: Expected 5 fields in line 248551, saw 7
-</pre></div>
-</div>
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+</div>
 </div>
 <table class="table">
 <thead>
@@ -446,41 +371,41 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-center"><p><a class="reference external" href="http://colhub.met.no">colhub.met.no</a></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="pasted-text">5433</span></p></td>
+<td class="text-center"><p><span class="pasted-text">6052</span></p></td>
+<td class="text-center"><p><span class="pasted-text">6578</span></p></td>
+<td class="text-center"><p><span class="pasted-text">6638</span></p></td>
+<td class="text-center"><p><span class="pasted-text">9808</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0.000</span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p><a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="pasted-text">5469</span></p></td>
+<td class="text-center"><p><span class="pasted-text">6596</span></p></td>
+<td class="text-center"><p><span class="pasted-text">6515</span></p></td>
+<td class="text-center"><p><span class="pasted-text">6569</span></p></td>
+<td class="text-center"><p><span class="pasted-text">9674</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0.000</span></p></td>
 </tr>
 <tr class="row-even"><td class="text-center"><p><a class="reference external" href="http://scihub.copernicus.eu">scihub.copernicus.eu</a></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="pasted-text">1649</span></p></td>
+<td class="text-center"><p><span class="pasted-text">4987</span></p></td>
+<td class="text-center"><p><span class="pasted-text">4987</span></p></td>
+<td class="text-center"><p><span class="pasted-text">8135</span></p></td>
+<td class="text-center"><p><span class="pasted-text">10393</span></p></td>
 <td class="text-center"><p>-</p></td>
 <td class="text-center"><p>-</p></td>
 <td class="text-center"><p>-</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p>MET Norway BE</p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">1455</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">1155</span></p></td>
 <td class="text-center"><p>-</p></td>
 <td class="text-center"><p>-</p></td>
 <td class="text-center"><p>-</p></td>
@@ -488,10 +413,16 @@ document.write(`
 </tbody>
 </table>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>Finally, the total amount of disk space dedicated to the NBS project, including either products in SAFE and NetCDF formats, represents 5000 Tb.</p>
+</div>
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>Due to tracking the data ingested and produced for the NBS project in the last year it is possible to forcast the upcoming need for disk space. As long as data flows follows the same pattern than last year, in 6 months the total disk space will grow until 6247 Tb; while in 12 months it is forecasted to become 6633 Tb.</p>
+</div>
 </div>
 </section>
 

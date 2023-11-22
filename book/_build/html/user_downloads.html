@@ -352,37 +352,6 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">OptionError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># show all rows, all columns</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;max_rows&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;max_columns&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;max_colwidth&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/_config/config.py:263,</span> in <span class="ni">CallableDynamicDoc.__call__</span><span class="nt">(self, *args, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">262</span> <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">263</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__func__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/_config/config.py:156,</span> in <span class="ni">_set_option</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">153</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;_set_option() got an unexpected keyword argument &quot;</span><span class="si">{</span><span class="n">kwarg</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">args</span><span class="p">[::</span><span class="mi">2</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]):</span>
-<span class="ne">--&gt; </span><span class="mi">156</span>     <span class="n">key</span> <span class="o">=</span> <span class="n">_get_single_key</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">silent</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">158</span>     <span class="n">o</span> <span class="o">=</span> <span class="n">_get_registered_option</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">159</span>     <span class="k">if</span> <span class="n">o</span> <span class="ow">and</span> <span class="n">o</span><span class="o">.</span><span class="n">validator</span><span class="p">:</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/_config/config.py:123,</span> in <span class="ni">_get_single_key</span><span class="nt">(pat, silent)</span>
-<span class="g g-Whitespace">    </span><span class="mi">121</span>     <span class="k">raise</span> <span class="n">OptionError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No such keys(s): </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">pat</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">122</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">123</span>     <span class="k">raise</span> <span class="n">OptionError</span><span class="p">(</span><span class="s2">&quot;Pattern matched multiple keys&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">124</span> <span class="n">key</span> <span class="o">=</span> <span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">126</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">silent</span><span class="p">:</span>
-
-<span class="ne">OptionError</span>: Pattern matched multiple keys
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -397,29 +366,145 @@ document.write(`
 </div>
 <p>The first portal to analyze is <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>. The target of the analysis is to check the amount of data downloaded by users, but also the number of users accessing the datahub. Below the historical amount of data per day is represented.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/0fbaf756f8ca8a3583d0452035ade151e382cbfcb5510fbc08bcad6c8d9a86b9.png" src="_images/0fbaf756f8ca8a3583d0452035ade151e382cbfcb5510fbc08bcad6c8d9a86b9.png" />
+</div>
 </div>
 <p>The same data is also represented below, with a difference. This time the data is not accounted by numer, but by volume. Although both graphs show similar trends, they are not exactly equal due to the variability in the ratio volume per product. For instance, the seasonality of optical products could have an impact in the total volume of products.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/ae54998beb4368f95e576f903f29065bc39fda8cd1a79aa0160fb3873b1c831a.png" src="_images/ae54998beb4368f95e576f903f29065bc39fda8cd1a79aa0160fb3873b1c831a.png" />
+</div>
 </div>
 <p>The table below is also interesting. It shows the amount of products downloaded for each the different Sentinel products. As expected, S1 and S2 are the most used Sentinels. S3 is slightly used, while S5p is not used.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>satellite  product_type   
+S1         GRDH               184907
+           GRDM                68230
+           OCN                 54868
+           RAW                151733
+           SLC                 45847
+S2         MSIL1C             282758
+           MSIL1C_DTERRENG      3100
+           MSIL2A             755846
+S3         OLCI_L1              3057
+           OLCI_L2               302
+           SLSTR_L1             3958
+           SLSTR_L2                4
+           SRAL_L1                20
+           SRAL_L2                55
+           SYN_L2                 27
+S5         NRTI_L2              3281
+           OFFL_L1B                3
+           OFFL_L2                 4
+dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <p>The following table shows the total downloaded volume of data in Tb per month. Here the seasonality of some Sentinel products can affect the final numbers.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>download_time  download_time
+2021           10                 7.588303
+               11               158.654049
+               12                57.675128
+2022           1                 36.406545
+               2                 29.798405
+               3                 39.869718
+               4                 46.768604
+               5                 51.219186
+               6                 42.277098
+               7                 44.565096
+               8                 42.852304
+               9                 47.447532
+               10                60.491409
+               11               141.031091
+               12                50.957670
+2023           1                 31.934204
+               2                 26.186281
+               3                 41.244137
+               4                 49.409686
+               5                 11.021648
+               6                 23.288549
+               7                 38.469730
+               8                 44.514413
+               9                 14.828489
+Name: size, dtype: float64
+</pre></div>
+</div>
+</div>
 </div>
 <p>The number of users accessing and using the datahub is also important to be known. The plot below show the number of users per day. Some variability is represented in its numbers. Nevertheless, <a class="reference external" href="http://colhub.met.no">colhub.met.no</a> is used by 15 to 20 users per day.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/914b9dbad48d75c4699542ce7872035a31bebc12b4bd3066b9c0aa13e3785c36.png" src="_images/914b9dbad48d75c4699542ce7872035a31bebc12b4bd3066b9c0aa13e3785c36.png" />
+</div>
 </div>
 </section>
 <section id="portal-colhub-archive-met-no">
 <h2>Portal: <a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a><a class="headerlink" href="#portal-colhub-archive-met-no" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+</div>
 </div>
 <p>Similar to <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>, here it is presented the performance of <a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a>. First the number of products downloaded per day. As shown in the plot below, some days the number of products downloaded is null. This is a correct value which is not reflecting the performance of the FE. The archive is not as frequently accessed as <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>. Only those users looking for historical data will used this portal.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/8241f93b06b596c82bf044106bba7b0e33e6cff8b818117ab8f9b7059cd2280a.png" src="_images/8241f93b06b596c82bf044106bba7b0e33e6cff8b818117ab8f9b7059cd2280a.png" />
+</div>
 </div>
 <p>As explained and shown in the previous section, the total volume downloaded is also shown in the graphic below.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/core/indexes/base.py:3802,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3801</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3802</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3803</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/_libs/index.pyx:138,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/_libs/index.pyx:165,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:5745,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:5753,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: &#39;size&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Volume downloaded per day (in Tb)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">total</span> <span class="o">=</span> <span class="n">nbs_AOI</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">nbs_AOI</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">date</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">total</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Volume downloaded in Tb&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">70</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/core/frame.py:3807,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3805</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3806</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3807</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3808</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3809</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/core/indexes/base.py:3804,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3802</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3803</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3804</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3805</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3806</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3807</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3808</span>     <span class="c1">#  the TypeError.</span>
+<span class="g g-Whitespace">   </span><span class="mi">3809</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: &#39;size&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>It is still interesting to see the number of products downloaded per product type. As shown in the previous section, S1 and S2 still are the most popular Sentinels.</p>
 <div class="cell tag_remove-input docutils container">

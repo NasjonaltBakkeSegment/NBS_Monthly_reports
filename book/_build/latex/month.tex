@@ -238,90 +238,16 @@ The table below shows a short overview of the NBS preformance operation during t
 \begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
 
 \begin{sphinxuseclass}{cell_output}
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{g+gt}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
-\PYG{n+ne}{ParserError}\PYG{g+gWhitespace}{                               }Traceback (most recent call last)
-\PYG{n}{Cell} \PYG{n}{In}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{44}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{40} \PYG{n}{col\PYGZus{}vol} \PYG{o}{=} \PYG{n}{nbs\PYGZus{}30}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{p}{)}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{size}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{/}\PYG{l+m+mi}{1024}\PYG{o}{/}\PYG{l+m+mi}{1024}\PYG{o}{/}\PYG{l+m+mi}{1024}\PYG{o}{/}\PYG{l+m+mi}{1024} \PYG{c+c1}{\PYGZsh{}in Tb}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{43} \PYG{n}{csvfile} \PYG{o}{=} \PYG{n}{logsdir} \PYG{o}{/} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{NBS\PYGZus{}frontend\PYGZhy{}AOI\PYGZus{}outputs.csv}\PYG{l+s+s1}{\PYGZsq{}}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{44} \PYG{n}{nbs\PYGZus{}AOI} \PYG{o}{=} \PYG{n}{get\PYGZus{}data}\PYG{p}{(}\PYG{n}{csvfile}\PYG{p}{)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{45} \PYG{c+c1}{\PYGZsh{}nbs\PYGZus{}AOI.set\PYGZus{}index(\PYGZsq{}download\PYGZus{}time\PYGZsq{}, inplace=True)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{46} \PYG{n}{nbs\PYGZus{}AOI}\PYG{o}{.}\PYG{n}{sort\PYGZus{}index}\PYG{p}{(}\PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
-
-\PYG{n+nn}{Cell In[3], line 25,} in \PYG{n+ni}{get\PYGZus{}data}\PYG{n+nt}{(file)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{24} \PYG{k}{def} \PYG{n+nf}{get\PYGZus{}data}\PYG{p}{(}\PYG{n}{file}\PYG{p}{)}\PYG{p}{:}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{25}     \PYG{n}{data} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}csv}\PYG{p}{(}\PYG{n}{file}\PYG{p}{,} \PYG{n}{header}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{,} \PYG{n}{names}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{download\PYGZus{}time}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{user}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{product}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{size}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{download\PYGZus{}duration}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYGZbs{}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{26}                         \PYG{p}{,} \PYG{n}{parse\PYGZus{}dates}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{download\PYGZus{}time}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,} \PYG{n}{index\PYGZus{}col}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{download\PYGZus{}time}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{27}     \PYG{n}{data}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{satellite}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{data}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{product}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{k}{lambda} \PYG{n}{x}\PYG{p}{:} \PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{:}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}
-\PYG{g+gWhitespace}{     }\PYG{l+m+mi}{28}     \PYG{n}{data}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{product\PYGZus{}type}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{data}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{product}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{n}{get\PYGZus{}product\PYGZus{}type}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/util/\PYGZus{}decorators.py:211,} in \PYG{n+ni}{deprecate\PYGZus{}kwarg.\PYGZlt{}locals\PYGZgt{}.\PYGZus{}deprecate\PYGZus{}kwarg.\PYGZlt{}locals\PYGZgt{}.wrapper}\PYG{n+nt}{(*args, **kwargs)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{209}     \PYG{k}{else}\PYG{p}{:}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{210}         \PYG{n}{kwargs}\PYG{p}{[}\PYG{n}{new\PYGZus{}arg\PYGZus{}name}\PYG{p}{]} \PYG{o}{=} \PYG{n}{new\PYGZus{}arg\PYGZus{}value}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{211} \PYG{k}{return} \PYG{n}{func}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{kwargs}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/util/\PYGZus{}decorators.py:331,} in \PYG{n+ni}{deprecate\PYGZus{}nonkeyword\PYGZus{}arguments.\PYGZlt{}locals\PYGZgt{}.decorate.\PYGZlt{}locals\PYGZgt{}.wrapper}\PYG{n+nt}{(*args, **kwargs)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{325} \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{args}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{n}{num\PYGZus{}allow\PYGZus{}args}\PYG{p}{:}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{326}     \PYG{n}{warnings}\PYG{o}{.}\PYG{n}{warn}\PYG{p}{(}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{327}         \PYG{n}{msg}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{arguments}\PYG{o}{=}\PYG{n}{\PYGZus{}format\PYGZus{}argument\PYGZus{}list}\PYG{p}{(}\PYG{n}{allow\PYGZus{}args}\PYG{p}{)}\PYG{p}{)}\PYG{p}{,}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{328}         \PYG{n+ne}{FutureWarning}\PYG{p}{,}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{329}         \PYG{n}{stacklevel}\PYG{o}{=}\PYG{n}{find\PYGZus{}stack\PYGZus{}level}\PYG{p}{(}\PYG{p}{)}\PYG{p}{,}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{330}     \PYG{p}{)}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{331} \PYG{k}{return} \PYG{n}{func}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{kwargs}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/io/parsers/readers.py:950,} in \PYG{n+ni}{read\PYGZus{}csv}\PYG{n+nt}{(filepath\PYGZus{}or\PYGZus{}buffer, sep, delimiter, header, names, index\PYGZus{}col, usecols, squeeze, prefix, mangle\PYGZus{}dupe\PYGZus{}cols, dtype, engine, converters, true\PYGZus{}values, false\PYGZus{}values, skipinitialspace, skiprows, skipfooter, nrows, na\PYGZus{}values, keep\PYGZus{}default\PYGZus{}na, na\PYGZus{}filter, verbose, skip\PYGZus{}blank\PYGZus{}lines, parse\PYGZus{}dates, infer\PYGZus{}datetime\PYGZus{}format, keep\PYGZus{}date\PYGZus{}col, date\PYGZus{}parser, dayfirst, cache\PYGZus{}dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding\PYGZus{}errors, dialect, error\PYGZus{}bad\PYGZus{}lines, warn\PYGZus{}bad\PYGZus{}lines, on\PYGZus{}bad\PYGZus{}lines, delim\PYGZus{}whitespace, low\PYGZus{}memory, memory\PYGZus{}map, float\PYGZus{}precision, storage\PYGZus{}options)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{935} \PYG{n}{kwds\PYGZus{}defaults} \PYG{o}{=} \PYG{n}{\PYGZus{}refine\PYGZus{}defaults\PYGZus{}read}\PYG{p}{(}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{936}     \PYG{n}{dialect}\PYG{p}{,}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{937}     \PYG{n}{delimiter}\PYG{p}{,}
-   \PYG{p}{(}\PYG{o}{.}\PYG{o}{.}\PYG{o}{.}\PYG{p}{)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{946}     \PYG{n}{defaults}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{delimiter}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{,}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{\PYGZcb{}}\PYG{p}{,}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{947} \PYG{p}{)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{948} \PYG{n}{kwds}\PYG{o}{.}\PYG{n}{update}\PYG{p}{(}\PYG{n}{kwds\PYGZus{}defaults}\PYG{p}{)}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{950} \PYG{k}{return} \PYG{n}{\PYGZus{}read}\PYG{p}{(}\PYG{n}{filepath\PYGZus{}or\PYGZus{}buffer}\PYG{p}{,} \PYG{n}{kwds}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/io/parsers/readers.py:611,} in \PYG{n+ni}{\PYGZus{}read}\PYG{n+nt}{(filepath\PYGZus{}or\PYGZus{}buffer, kwds)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{608}     \PYG{k}{return} \PYG{n}{parser}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{610} \PYG{k}{with} \PYG{n}{parser}\PYG{p}{:}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{611}     \PYG{k}{return} \PYG{n}{parser}\PYG{o}{.}\PYG{n}{read}\PYG{p}{(}\PYG{n}{nrows}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/io/parsers/readers.py:1778,} in \PYG{n+ni}{TextFileReader.read}\PYG{n+nt}{(self, nrows)}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1771} \PYG{n}{nrows} \PYG{o}{=} \PYG{n}{validate\PYGZus{}integer}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{nrows}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{nrows}\PYG{p}{)}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1772} \PYG{k}{try}\PYG{p}{:}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1773}     \PYG{c+c1}{\PYGZsh{} error: \PYGZdq{}ParserBase\PYGZdq{} has no attribute \PYGZdq{}read\PYGZdq{}}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1774}     \PYG{p}{(}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1775}         \PYG{n}{index}\PYG{p}{,}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1776}         \PYG{n}{columns}\PYG{p}{,}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1777}         \PYG{n}{col\PYGZus{}dict}\PYG{p}{,}
-\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{1778}     \PYG{p}{)} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}engine}\PYG{o}{.}\PYG{n}{read}\PYG{p}{(}  \PYG{c+c1}{\PYGZsh{} type: ignore[attr\PYGZhy{}defined]}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1779}         \PYG{n}{nrows}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1780}     \PYG{p}{)}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1781} \PYG{k}{except} \PYG{n+ne}{Exception}\PYG{p}{:}
-\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{1782}     \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{close}\PYG{p}{(}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/io/parsers/c\PYGZus{}parser\PYGZus{}wrapper.py:230,} in \PYG{n+ni}{CParserWrapper.read}\PYG{n+nt}{(self, nrows)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{228} \PYG{k}{try}\PYG{p}{:}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{229}     \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{low\PYGZus{}memory}\PYG{p}{:}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{230}         \PYG{n}{chunks} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}reader}\PYG{o}{.}\PYG{n}{read\PYGZus{}low\PYGZus{}memory}\PYG{p}{(}\PYG{n}{nrows}\PYG{p}{)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{231}         \PYG{c+c1}{\PYGZsh{} destructive to chunks}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{232}         \PYG{n}{data} \PYG{o}{=} \PYG{n}{\PYGZus{}concatenate\PYGZus{}chunks}\PYG{p}{(}\PYG{n}{chunks}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/\PYGZus{}libs/parsers.pyx:808,} in \PYG{n+ni}{pandas.\PYGZus{}libs.parsers.TextReader.read\PYGZus{}low\PYGZus{}memory}\PYG{n+nt}{()}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/\PYGZus{}libs/parsers.pyx:866,} in \PYG{n+ni}{pandas.\PYGZus{}libs.parsers.TextReader.\PYGZus{}read\PYGZus{}rows}\PYG{n+nt}{()}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/\PYGZus{}libs/parsers.pyx:852,} in \PYG{n+ni}{pandas.\PYGZus{}libs.parsers.TextReader.\PYGZus{}tokenize\PYGZus{}rows}\PYG{n+nt}{()}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/\PYGZus{}libs/parsers.pyx:1973,} in \PYG{n+ni}{pandas.\PYGZus{}libs.parsers.raise\PYGZus{}parser\PYGZus{}error}\PYG{n+nt}{()}
-
-\PYG{n+ne}{ParserError}: Error tokenizing data. C error: Expected 5 fields in line 248551, saw 7
-\end{sphinxVerbatim}
-
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \begin{sphinxuseclass}{cell}
-\begin{sphinxuseclass}{tag_remove-input}
+\begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 
@@ -362,75 +288,75 @@ Volume
 \sphinxhref{http://colhub.met.no}{colhub.met.no}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{5433}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{6052}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{6578}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{6638}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{9808}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{0}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{0}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{0.000}
 \\
 \hline
 \sphinxAtStartPar
 \sphinxhref{http://colhub-archive.met.no}{colhub\sphinxhyphen{}archive.met.no}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{5469}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{6596}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{6515}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{6569}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{9674}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{0}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{0}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{0.000}
 \\
 \hline
 \sphinxAtStartPar
 \sphinxhref{http://scihub.copernicus.eu}{scihub.copernicus.eu}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{1649}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{4987}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{4987}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{8135}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{10393}
 &
 \sphinxAtStartPar
 \sphinxhyphen{}
@@ -446,19 +372,19 @@ Volume
 MET Norway BE
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{0}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{1455}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{0}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{0}
 &
 \sphinxAtStartPar
-
+\DUrole{pasted-text}{1155}
 &
 \sphinxAtStartPar
 \sphinxhyphen{}
@@ -475,7 +401,14 @@ MET Norway BE
 \sphinxattableend\end{savenotes}
 
 \begin{sphinxuseclass}{cell}
-\begin{sphinxuseclass}{tag_remove-input}
+\begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\sphinxAtStartPar
+Finally, the total amount of disk space dedicated to the NBS project, including either products in SAFE and NetCDF formats, represents 5000 Tb.
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \begin{sphinxuseclass}{cell}
@@ -483,7 +416,14 @@ MET Norway BE
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \begin{sphinxuseclass}{cell}
-\begin{sphinxuseclass}{tag_remove-input}
+\begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\sphinxAtStartPar
+Due to tracking the data ingested and produced for the NBS project in the last year it is possible to forcast the upcoming need for disk space. As long as data flows follows the same pattern than last year, in 6 months the total disk space will grow until 6247 Tb; while in 12 months it is forecasted to become 6633 Tb.
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \sphinxstepscope
@@ -1912,41 +1852,7 @@ day
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \begin{sphinxuseclass}{cell}
-\begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
-
-\begin{sphinxuseclass}{cell_output}
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{g+gt}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
-\PYG{n+ne}{OptionError}\PYG{g+gWhitespace}{                               }Traceback (most recent call last)
-\PYG{n}{Cell} \PYG{n}{In}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{2}
-\PYG{g+gWhitespace}{      }\PYG{l+m+mi}{1} \PYG{c+c1}{\PYGZsh{} show all rows, all columns}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{2} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{set\PYGZus{}option}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{max\PYGZus{}rows}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)}
-\PYG{g+gWhitespace}{      }\PYG{l+m+mi}{3} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{set\PYGZus{}option}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{max\PYGZus{}columns}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)}
-\PYG{g+gWhitespace}{      }\PYG{l+m+mi}{4} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{set\PYGZus{}option}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{max\PYGZus{}colwidth}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/\PYGZus{}config/config.py:263,} in \PYG{n+ni}{CallableDynamicDoc.\PYGZus{}\PYGZus{}call\PYGZus{}\PYGZus{}}\PYG{n+nt}{(self, *args, **kwds)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{262} \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}call\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{kwds}\PYG{p}{)} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZgt{}} \PYG{n}{T}\PYG{p}{:}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{263}     \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n+nv+vm}{\PYGZus{}\PYGZus{}func\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{*}\PYG{o}{*}\PYG{n}{kwds}\PYG{p}{)}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/\PYGZus{}config/config.py:156,} in \PYG{n+ni}{\PYGZus{}set\PYGZus{}option}\PYG{n+nt}{(*args, **kwargs)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{153}     \PYG{k}{raise} \PYG{n+ne}{TypeError}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZus{}set\PYGZus{}option() got an unexpected keyword argument }\PYG{l+s+s1}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{kwarg}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZdq{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{155} \PYG{k}{for} \PYG{n}{k}\PYG{p}{,} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb}{zip}\PYG{p}{(}\PYG{n}{args}\PYG{p}{[}\PYG{p}{:}\PYG{p}{:}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{n}{args}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{p}{:}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{)}\PYG{p}{:}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{156}     \PYG{n}{key} \PYG{o}{=} \PYG{n}{\PYGZus{}get\PYGZus{}single\PYGZus{}key}\PYG{p}{(}\PYG{n}{k}\PYG{p}{,} \PYG{n}{silent}\PYG{p}{)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{158}     \PYG{n}{o} \PYG{o}{=} \PYG{n}{\PYGZus{}get\PYGZus{}registered\PYGZus{}option}\PYG{p}{(}\PYG{n}{key}\PYG{p}{)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{159}     \PYG{k}{if} \PYG{n}{o} \PYG{o+ow}{and} \PYG{n}{o}\PYG{o}{.}\PYG{n}{validator}\PYG{p}{:}
-
-\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/\PYGZus{}config/config.py:123,} in \PYG{n+ni}{\PYGZus{}get\PYGZus{}single\PYGZus{}key}\PYG{n+nt}{(pat, silent)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{121}     \PYG{k}{raise} \PYG{n}{OptionError}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{No such keys(s): }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb}{repr}\PYG{p}{(}\PYG{n}{pat}\PYG{p}{)}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{122} \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{keys}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{1}\PYG{p}{:}
-\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{123}     \PYG{k}{raise} \PYG{n}{OptionError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Pattern matched multiple keys}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{124} \PYG{n}{key} \PYG{o}{=} \PYG{n}{keys}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
-\PYG{g+gWhitespace}{    }\PYG{l+m+mi}{126} \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{silent}\PYG{p}{:}
-
-\PYG{n+ne}{OptionError}: Pattern matched multiple keys
-\end{sphinxVerbatim}
-
-\end{sphinxuseclass}\end{sphinxVerbatimOutput}
-
+\begin{sphinxuseclass}{tag_remove-input}
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \begin{sphinxuseclass}{cell}
@@ -1975,56 +1881,195 @@ In this section the perfomance of the FrontEnds is analyzed, for both \sphinxhre
 The first portal to analyze is \sphinxhref{http://colhub.met.no}{colhub.met.no}. The target of the analysis is to check the amount of data downloaded by users, but also the number of users accessing the datahub. Below the historical amount of data per day is represented.
 
 \begin{sphinxuseclass}{cell}
-\begin{sphinxuseclass}{tag_remove-input}
+\begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\noindent\sphinxincludegraphics{{0fbaf756f8ca8a3583d0452035ade151e382cbfcb5510fbc08bcad6c8d9a86b9}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \sphinxAtStartPar
 The same data is also represented below, with a difference. This time the data is not accounted by numer, but by volume. Although both graphs show similar trends, they are not exactly equal due to the variability in the ratio volume per product. For instance, the seasonality of optical products could have an impact in the total volume of products.
 
 \begin{sphinxuseclass}{cell}
-\begin{sphinxuseclass}{tag_remove-input}
+\begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\noindent\sphinxincludegraphics{{ae54998beb4368f95e576f903f29065bc39fda8cd1a79aa0160fb3873b1c831a}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \sphinxAtStartPar
 The table below is also interesting. It shows the amount of products downloaded for each the different Sentinel products. As expected, S1 and S2 are the most used Sentinels. S3 is slightly used, while S5p is not used.
 
 \begin{sphinxuseclass}{cell}
-\begin{sphinxuseclass}{tag_remove-input}
+\begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+satellite  product\PYGZus{}type   
+S1         GRDH               184907
+           GRDM                68230
+           OCN                 54868
+           RAW                151733
+           SLC                 45847
+S2         MSIL1C             282758
+           MSIL1C\PYGZus{}DTERRENG      3100
+           MSIL2A             755846
+S3         OLCI\PYGZus{}L1              3057
+           OLCI\PYGZus{}L2               302
+           SLSTR\PYGZus{}L1             3958
+           SLSTR\PYGZus{}L2                4
+           SRAL\PYGZus{}L1                20
+           SRAL\PYGZus{}L2                55
+           SYN\PYGZus{}L2                 27
+S5         NRTI\PYGZus{}L2              3281
+           OFFL\PYGZus{}L1B                3
+           OFFL\PYGZus{}L2                 4
+dtype: int64
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \sphinxAtStartPar
 The following table shows the total downloaded volume of data in Tb per month. Here the seasonality of some Sentinel products can affect the final numbers.
 
 \begin{sphinxuseclass}{cell}
-\begin{sphinxuseclass}{tag_remove-input}
+\begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+download\PYGZus{}time  download\PYGZus{}time
+2021           10                 7.588303
+               11               158.654049
+               12                57.675128
+2022           1                 36.406545
+               2                 29.798405
+               3                 39.869718
+               4                 46.768604
+               5                 51.219186
+               6                 42.277098
+               7                 44.565096
+               8                 42.852304
+               9                 47.447532
+               10                60.491409
+               11               141.031091
+               12                50.957670
+2023           1                 31.934204
+               2                 26.186281
+               3                 41.244137
+               4                 49.409686
+               5                 11.021648
+               6                 23.288549
+               7                 38.469730
+               8                 44.514413
+               9                 14.828489
+Name: size, dtype: float64
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \sphinxAtStartPar
 The number of users accessing and using the datahub is also important to be known. The plot below show the number of users per day. Some variability is represented in its numbers. Nevertheless, \sphinxhref{http://colhub.met.no}{colhub.met.no} is used by 15 to 20 users per day.
 
 \begin{sphinxuseclass}{cell}
-\begin{sphinxuseclass}{tag_remove-input}
+\begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\noindent\sphinxincludegraphics{{914b9dbad48d75c4699542ce7872035a31bebc12b4bd3066b9c0aa13e3785c36}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 
 \section{Portal: colhub\sphinxhyphen{}archive.met.no}
 \label{\detokenize{user_downloads:portal-colhub-archive-met-no}}
 \begin{sphinxuseclass}{cell}
-\begin{sphinxuseclass}{tag_remove-input}
+\begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \sphinxAtStartPar
 Similar to \sphinxhref{http://colhub.met.no}{colhub.met.no}, here it is presented the performance of \sphinxhref{http://colhub-archive.met.no}{colhub\sphinxhyphen{}archive.met.no}. First the number of products downloaded per day. As shown in the plot below, some days the number of products downloaded is null. This is a correct value which is not reflecting the performance of the FE. The archive is not as frequently accessed as \sphinxhref{http://colhub.met.no}{colhub.met.no}. Only those users looking for historical data will used this portal.
 
 \begin{sphinxuseclass}{cell}
-\begin{sphinxuseclass}{tag_remove-input}
+\begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\noindent\sphinxincludegraphics{{8241f93b06b596c82bf044106bba7b0e33e6cff8b818117ab8f9b7059cd2280a}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \sphinxAtStartPar
 As explained and shown in the previous section, the total volume downloaded is also shown in the graphic below.
 
 \begin{sphinxuseclass}{cell}
-\begin{sphinxuseclass}{tag_remove-input}
+\begin{sphinxuseclass}{tag_remove-input}\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gt}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n+ne}{KeyError}\PYG{g+gWhitespace}{                                  }Traceback (most recent call last)
+\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/core/indexes/base.py:3802,} in \PYG{n+ni}{Index.get\PYGZus{}loc}\PYG{n+nt}{(self, key, method, tolerance)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3801} \PYG{k}{try}\PYG{p}{:}
+\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{3802}     \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}engine}\PYG{o}{.}\PYG{n}{get\PYGZus{}loc}\PYG{p}{(}\PYG{n}{casted\PYGZus{}key}\PYG{p}{)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3803} \PYG{k}{except} \PYG{n+ne}{KeyError} \PYG{k}{as} \PYG{n}{err}\PYG{p}{:}
+
+\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/\PYGZus{}libs/index.pyx:138,} in \PYG{n+ni}{pandas.\PYGZus{}libs.index.IndexEngine.get\PYGZus{}loc}\PYG{n+nt}{()}
+
+\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/\PYGZus{}libs/index.pyx:165,} in \PYG{n+ni}{pandas.\PYGZus{}libs.index.IndexEngine.get\PYGZus{}loc}\PYG{n+nt}{()}
+
+\PYG{n+nn}{File pandas/\PYGZus{}libs/hashtable\PYGZus{}class\PYGZus{}helper.pxi:5745,} in \PYG{n+ni}{pandas.\PYGZus{}libs.hashtable.PyObjectHashTable.get\PYGZus{}item}\PYG{n+nt}{()}
+
+\PYG{n+nn}{File pandas/\PYGZus{}libs/hashtable\PYGZus{}class\PYGZus{}helper.pxi:5753,} in \PYG{n+ni}{pandas.\PYGZus{}libs.hashtable.PyObjectHashTable.get\PYGZus{}item}\PYG{n+nt}{()}
+
+\PYG{n+ne}{KeyError}: \PYGZsq{}size\PYGZsq{}
+
+\PYG{n}{The} \PYG{n}{above} \PYG{n}{exception} \PYG{n}{was} \PYG{n}{the} \PYG{n}{direct} \PYG{n}{cause} \PYG{n}{of} \PYG{n}{the} \PYG{n}{following} \PYG{n}{exception}\PYG{p}{:}
+
+\PYG{n+ne}{KeyError}\PYG{g+gWhitespace}{                                  }Traceback (most recent call last)
+\PYG{n}{Cell} \PYG{n}{In}\PYG{p}{[}\PYG{l+m+mi}{14}\PYG{p}{]}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{2}
+\PYG{g+gWhitespace}{      }\PYG{l+m+mi}{1} \PYG{c+c1}{\PYGZsh{} Volume downloaded per day (in Tb)}
+\PYG{n+ne}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{2} \PYG{n}{total} \PYG{o}{=} \PYG{n}{nbs\PYGZus{}AOI}\PYG{o}{.}\PYG{n}{groupby}\PYG{p}{(}\PYG{n}{nbs\PYGZus{}AOI}\PYG{o}{.}\PYG{n}{index}\PYG{o}{.}\PYG{n}{date}\PYG{p}{)}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{numeric\PYGZus{}only}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{size}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{o}{/}\PYG{l+m+mi}{1024}\PYG{o}{/}\PYG{l+m+mi}{1024}\PYG{o}{/}\PYG{l+m+mi}{1024}\PYG{o}{/}\PYG{l+m+mi}{1024}
+\PYG{g+gWhitespace}{      }\PYG{l+m+mi}{3} \PYG{n}{total}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{ylabel}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Volume downloaded in Tb}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{rot}\PYG{o}{=}\PYG{l+m+mi}{70}\PYG{p}{)}
+\PYG{g+gWhitespace}{      }\PYG{l+m+mi}{4} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{k+kc}{True}\PYG{p}{)}
+
+\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/core/frame.py:3807,} in \PYG{n+ni}{DataFrame.\PYGZus{}\PYGZus{}getitem\PYGZus{}\PYGZus{}}\PYG{n+nt}{(self, key)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3805} \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{columns}\PYG{o}{.}\PYG{n}{nlevels} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{1}\PYG{p}{:}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3806}     \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}getitem\PYGZus{}multilevel}\PYG{p}{(}\PYG{n}{key}\PYG{p}{)}
+\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{3807} \PYG{n}{indexer} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{columns}\PYG{o}{.}\PYG{n}{get\PYGZus{}loc}\PYG{p}{(}\PYG{n}{key}\PYG{p}{)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3808} \PYG{k}{if} \PYG{n}{is\PYGZus{}integer}\PYG{p}{(}\PYG{n}{indexer}\PYG{p}{)}\PYG{p}{:}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3809}     \PYG{n}{indexer} \PYG{o}{=} \PYG{p}{[}\PYG{n}{indexer}\PYG{p}{]}
+
+\PYG{n+nn}{File \PYGZti{}/anaconda3/lib/python3.11/site\PYGZhy{}packages/pandas/core/indexes/base.py:3804,} in \PYG{n+ni}{Index.get\PYGZus{}loc}\PYG{n+nt}{(self, key, method, tolerance)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3802}     \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}engine}\PYG{o}{.}\PYG{n}{get\PYGZus{}loc}\PYG{p}{(}\PYG{n}{casted\PYGZus{}key}\PYG{p}{)}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3803} \PYG{k}{except} \PYG{n+ne}{KeyError} \PYG{k}{as} \PYG{n}{err}\PYG{p}{:}
+\PYG{n+ne}{\PYGZhy{}\PYGZgt{} }\PYG{l+m+mi}{3804}     \PYG{k}{raise} \PYG{n+ne}{KeyError}\PYG{p}{(}\PYG{n}{key}\PYG{p}{)} \PYG{k+kn}{from} \PYG{n+nn}{err}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3805} \PYG{k}{except} \PYG{n+ne}{TypeError}\PYG{p}{:}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3806}     \PYG{c+c1}{\PYGZsh{} If we have a listlike key, \PYGZus{}check\PYGZus{}indexing\PYGZus{}error will raise}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3807}     \PYG{c+c1}{\PYGZsh{}  InvalidIndexError. Otherwise we fall through and re\PYGZhy{}raise}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3808}     \PYG{c+c1}{\PYGZsh{}  the TypeError.}
+\PYG{g+gWhitespace}{   }\PYG{l+m+mi}{3809}     \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}check\PYGZus{}indexing\PYGZus{}error}\PYG{p}{(}\PYG{n}{key}\PYG{p}{)}
+
+\PYG{n+ne}{KeyError}: \PYGZsq{}size\PYGZsq{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
 \end{sphinxuseclass}
 \end{sphinxuseclass}
 \sphinxAtStartPar
