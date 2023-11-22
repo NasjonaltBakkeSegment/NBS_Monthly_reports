@@ -13,3 +13,9 @@ sudo apt-get install texlive-latex-extra \
                      texlive-fonts-extra \
                      texlive-xetex latexmk
 ```
+
+To publish the HTML report to GitHub pages you need ghp-import
+
+```
+sudo apt install ghp-import
+``````
