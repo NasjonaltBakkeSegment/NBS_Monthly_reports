@@ -23,7 +23,7 @@ fi
 {
     echo "# Previous reports"
     echo
-    echo "Below is a list of previous reports. Click the link to download a PDF version of the report"
+    echo "Below is a list of previous reports. If viewing the HTML version of this report online, you can click the link to download a PDF version of a previous report"
     if [ -n "$pdf_list" ]; then
         echo "$pdf_list"
     else
