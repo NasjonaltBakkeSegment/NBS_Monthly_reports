@@ -15,7 +15,7 @@ shopt -s nullglob
 pdf_files=(*.pdf)
 if [ ${#pdf_files[@]} -gt 0 ]; then
     for pdf_file in "${pdf_files[@]}"; do
-        pdf_list+="* [${pdf_file%.pdf}.pdf](${reports}${pdf_file})"$'\n'
+        pdf_list+="* [${pdf_file%.pdf}.pdf](../reports/${pdf_file})"$'\n'
     done
 fi
 
