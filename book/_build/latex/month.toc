@@ -24,8 +24,8 @@
 \contentsline {chapter}{\numberline {8}Monitoring data downloads from colhub portals}{37}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Portal: colhub.met.no}{37}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Portal: colhub\sphinxhyphen {}archive.met.no}{40}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Data volumes for NBS}{43}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Volumes for AOI backends}{44}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Volume for netcdf products}{44}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Totals}{44}{section.9.3}%
-\contentsline {chapter}{\numberline {10}Previous reports}{45}{chapter.10}%
+\contentsline {chapter}{\numberline {9}Data volumes for NBS}{45}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Volumes for AOI backends}{45}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Volume for netcdf products}{46}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Totals}{48}{section.9.3}%
+\contentsline {chapter}{\numberline {10}Previous reports}{61}{chapter.10}%

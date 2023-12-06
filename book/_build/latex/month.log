@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.11.22)  6 DEC 2023 13:38
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.11.22)  6 DEC 2023 14:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1827,14 +1827,110 @@ File: 8241f93b06b596c82bf044106bba7b0e33e6cff8b818117ab8f9b7059cd2280a.png Grap
 hic file (type bmp)
 <8241f93b06b596c82bf044106bba7b0e33e6cff8b818117ab8f9b7059cd2280a.png>
  [40]
-Overfull \vbox (3.17722pt too high) detected at line 2069
+File: a46b7b78b0208d0d7f589878b89c54395238a650a418632ba44e2b81a6a004e2.png Grap
+hic file (type bmp)
+<a46b7b78b0208d0d7f589878b89c54395238a650a418632ba44e2b81a6a004e2.png>
+ [41] [42]
+File: d3bd9b332216be45cf2a4d1772163f714685670b988922b17611e243fbd5ac46.png Grap
+hic file (type bmp)
+<d3bd9b332216be45cf2a4d1772163f714685670b988922b17611e243fbd5ac46.png>
+ [43] [44]
+Chapter 9.
+File: 8c3b52a5e190e9edc670760bd278401a905b6fe2f738ed54d67daa0a8bc5beac.png Grap
+hic file (type bmp)
+<8c3b52a5e190e9edc670760bd278401a905b6fe2f738ed54d67daa0a8bc5beac.png>
+[45
+
+]
+File: 514a6e06e1846a53556b1923258ce3334a68aef833798743171ba0d5749aae17.png Grap
+hic file (type bmp)
+<514a6e06e1846a53556b1923258ce3334a68aef833798743171ba0d5749aae17.png>
+File: f3837bd6350f93dd6ca280d67067f55bab77b03a98a46039f05fb4f4ad9515cd.png Grap
+hic file (type bmp)
+<f3837bd6350f93dd6ca280d67067f55bab77b03a98a46039f05fb4f4ad9515cd.png>
+ [46]
+File: f1dbfa453a633998d91ba6f11a08e8ca71098030b9247fd4a27b43a8edaf6329.png Grap
+hic file (type bmp)
+<f1dbfa453a633998d91ba6f11a08e8ca71098030b9247fd4a27b43a8edaf6329.png>
+ [47]
+File: f5da252f179dc3e04efdd0e2dde22a0d2d182c174e108930af56a46121733ab3.png Grap
+hic file (type bmp)
+<f5da252f179dc3e04efdd0e2dde22a0d2d182c174e108930af56a46121733ab3.png>
+ [48] [49]
+Underfull \vbox (badness 10000) detected at line 2858
  []
 
-[41] [42]
-Chapter 9.
-[43
 
-] [44]
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+[50]
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+[51]
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+[52]
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+[53]
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+[54]
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+[55]
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+[56]
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+[57]
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2858
+ []
+
+[58] [59] [60
+
+]
 Chapter 10.
 (./month.ind)
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1871,9 +1967,7 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
- [45
-
-] (./month.aux
+ [61] (./month.aux
 LaTeX Info: Redefining \rmfamily on input line 19.
 LaTeX Info: Redefining \sffamily on input line 19.
 LaTeX Info: Redefining \ttfamily on input line 19.
@@ -1882,12 +1976,12 @@ Package rerunfilecheck Info: File `month.out' has not changed.
 (rerunfilecheck)             Checksum: EE823CBC63DC4D0E38082009BC2AADCF;1994.
  ) 
 Here is how much of TeX's memory you used:
- 43180 strings out of 478147
- 1004262 string characters out of 5853685
- 1807599 words of memory out of 5000000
- 62970 multiletter control sequences out of 15000+600000
- 474719 words of font info for 105 fonts, out of 8000000 for 9000
+ 43234 strings out of 478147
+ 1008694 string characters out of 5853685
+ 2639599 words of memory out of 5000000
+ 63019 multiletter control sequences out of 15000+600000
+ 474703 words of font info for 103 fonts, out of 8000000 for 9000
  37 hyphenation exceptions out of 8191
  99i,11n,115p,1117b,2289s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on month.pdf (49 pages).
+Output written on month.pdf (65 pages).
