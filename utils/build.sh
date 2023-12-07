@@ -41,4 +41,4 @@ fi
 
 # Build the HTML report
 jb clean $book
-jb build $book --all --clear-output
+jb build $book --all

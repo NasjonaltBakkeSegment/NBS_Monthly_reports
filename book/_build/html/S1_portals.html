@@ -1,0 +1,1230 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Sentinel-1 products &#8212; NBS monthly report</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'S1_portals';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sentinel-2 Level-1C products" href="S2L1C_portals.html" />
+    <link rel="prev" title="Quick summary" href="summary.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NBS monthly report</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    An Overview
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="acronyms.html">Acronyms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Quick summary</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sentinel-1 products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="S2L1C_portals.html">Sentinel-2 Level-1C products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="S2L2A_portals.html">Sentinel-2 Level-2A products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="S3_portals.html">Sentinel-3 products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="S5p_portals.html">Sentinel-5p products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_downloads.html">Monitoring data downloads from colhub portals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="volumes.html">Data volumes for NBS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="previous_reports.html">Previous reports</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/rabaneda/NBS_monthly_report" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/S1_portals.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sentinel-1 products</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#products-on-portals">Products on portals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-products">Missing products</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-ingestion">Data ingestion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="sentinel-1-products">
+<h1>Sentinel-1 products<a class="headerlink" href="#sentinel-1-products" title="Permalink to this heading">#</a></h1>
+<p>This section shows the performance of MET Norway for Sentinel-1 products. Both, an overall status and last month status are shown below.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<section id="products-on-portals">
+<h2>Products on portals<a class="headerlink" href="#products-on-portals" title="Permalink to this heading">#</a></h2>
+<p>The following section contains an update on the Sentinel-1 products included in the different FEs and BEs.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/5731032764714dc3e2f1aea7f7f02cc89a998187e5e5bcb22b1b7020780ac55c.png" src="_images/5731032764714dc3e2f1aea7f7f02cc89a998187e5e5bcb22b1b7020780ac55c.png" />
+</div>
+</div>
+<p>The figure above represents the overall number of products present in the different BackEnds and FrontEnds per day for Sentinel-1.</p>
+<p>While the figure below shows a zoom on the last 30 days.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/8a934e0c8863e444eb582e604055f2eb0209dc231e47df07082db8b741e8afc3.png" src="_images/8a934e0c8863e444eb582e604055f2eb0209dc231e47df07082db8b741e8afc3.png" />
+</div>
+</div>
+<p>A 30 days table is also included for more detailed information.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>colhub.met.no</th>
+      <th>scihub.copernicues.eu</th>
+      <th>colhub-archive.met.no</th>
+      <th>MET Norway BE</th>
+    </tr>
+    <tr>
+      <th>sensing_date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2023-11-06</th>
+      <td>283</td>
+      <td>0.0</td>
+      <td>283.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-07</th>
+      <td>279</td>
+      <td>0.0</td>
+      <td>278.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-08</th>
+      <td>274</td>
+      <td>0.0</td>
+      <td>279.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-09</th>
+      <td>319</td>
+      <td>0.0</td>
+      <td>315.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-10</th>
+      <td>188</td>
+      <td>0.0</td>
+      <td>189.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-11</th>
+      <td>41</td>
+      <td>0.0</td>
+      <td>45.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-12</th>
+      <td>69</td>
+      <td>0.0</td>
+      <td>72.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-13</th>
+      <td>55</td>
+      <td>0.0</td>
+      <td>60.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-14</th>
+      <td>70</td>
+      <td>0.0</td>
+      <td>70.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-15</th>
+      <td>65</td>
+      <td>0.0</td>
+      <td>70.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-16</th>
+      <td>66</td>
+      <td>0.0</td>
+      <td>68.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-17</th>
+      <td>63</td>
+      <td>0.0</td>
+      <td>66.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-18</th>
+      <td>51</td>
+      <td>0.0</td>
+      <td>54.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-19</th>
+      <td>56</td>
+      <td>0.0</td>
+      <td>58.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-20</th>
+      <td>46</td>
+      <td>0.0</td>
+      <td>51.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-21</th>
+      <td>35</td>
+      <td>0.0</td>
+      <td>36.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-22</th>
+      <td>55</td>
+      <td>0.0</td>
+      <td>58.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-23</th>
+      <td>40</td>
+      <td>0.0</td>
+      <td>44.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-24</th>
+      <td>59</td>
+      <td>0.0</td>
+      <td>60.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-25</th>
+      <td>55</td>
+      <td>0.0</td>
+      <td>59.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-26</th>
+      <td>69</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-28</th>
+      <td>63</td>
+      <td>0.0</td>
+      <td>65.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-29</th>
+      <td>61</td>
+      <td>0.0</td>
+      <td>65.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-11-30</th>
+      <td>50</td>
+      <td>0.0</td>
+      <td>53.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-12-01</th>
+      <td>57</td>
+      <td>0.0</td>
+      <td>59.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-12-02</th>
+      <td>48</td>
+      <td>0.0</td>
+      <td>53.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-12-03</th>
+      <td>75</td>
+      <td>0.0</td>
+      <td>76.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-12-04</th>
+      <td>36</td>
+      <td>0.0</td>
+      <td>38.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-12-05</th>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2023-12-06</th>
+      <td>30</td>
+      <td>0.0</td>
+      <td>30.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="missing-products">
+<h2>Missing products<a class="headerlink" href="#missing-products" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>The overall total number of Sentinel-1 products is 28275383. The number of overall Sentinel-1 missing products consists of 26029346 images. This represents that a 0% of the total was included in MET Norway DHR, while a 100% was not included.</p>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>The total number of Sentinel-1 products in the last 30 days is 28275383. The number of Sentinel-1 missing products during the last 30 days consists of 26030112 images. This represents that a 0% of the total was included in MET Norway DHR, while a 100% was not included.</p>
+</div>
+</div>
+</section>
+<section id="data-ingestion">
+<h2>Data ingestion<a class="headerlink" href="#data-ingestion" title="Permalink to this heading">#</a></h2>
+<p>In this section the time difference between sensing time and ingestion time at MET norway is assessed. The ingestion time is the time at which a Sentinel product was downloaded to MET Norway BE and so, it is automatically available in at least one of the MET Norway FEs.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/6989e2a1b1c7eaa95aaa812fa05d0b118be6635c8111056241c522e6eb42efb1.png" src="_images/6989e2a1b1c7eaa95aaa812fa05d0b118be6635c8111056241c522e6eb42efb1.png" />
+</div>
+</div>
+<p>The figure above shows an overall status of the Sentinel-1 synchronization between ESA datahub and MET Norway BE. The number of products synchronized and deleted are represented by the dark and light blue lines respectively. The red line represents the timeliness.</p>
+<p>Following previous sections, the graph below shows a zoom in the last 30 days for the synchronization between ESA datahub and MET Norway BE.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/3786c0e157ddcdeaecabb133d21c0f3adc57b0749ffffb161584d9b10a4e102b.png" src="_images/3786c0e157ddcdeaecabb133d21c0f3adc57b0749ffffb161584d9b10a4e102b.png" />
+</div>
+</div>
+<p>A more detailed information is given in the table below where the last 30 days are assessed for products synchronized from ESA.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>size</th>
+      <th>number</th>
+      <th>timeliness</th>
+    </tr>
+    <tr>
+      <th>day</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2023-11-07</th>
+      <td>330.065935</td>
+      <td>219</td>
+      <td>0.972964</td>
+    </tr>
+    <tr>
+      <th>2023-11-08</th>
+      <td>307.589884</td>
+      <td>227</td>
+      <td>1.139506</td>
+    </tr>
+    <tr>
+      <th>2023-11-09</th>
+      <td>352.627083</td>
+      <td>240</td>
+      <td>0.958345</td>
+    </tr>
+    <tr>
+      <th>2023-11-10</th>
+      <td>265.384369</td>
+      <td>173</td>
+      <td>1.180883</td>
+    </tr>
+    <tr>
+      <th>2023-11-11</th>
+      <td>63.824515</td>
+      <td>15</td>
+      <td>15.432398</td>
+    </tr>
+    <tr>
+      <th>2023-11-12</th>
+      <td>11.521272</td>
+      <td>7</td>
+      <td>33.916689</td>
+    </tr>
+    <tr>
+      <th>2023-11-13</th>
+      <td>68.882293</td>
+      <td>26</td>
+      <td>57.801575</td>
+    </tr>
+    <tr>
+      <th>2023-11-14</th>
+      <td>198.327530</td>
+      <td>84</td>
+      <td>77.657037</td>
+    </tr>
+    <tr>
+      <th>2023-11-15</th>
+      <td>152.446587</td>
+      <td>63</td>
+      <td>90.561755</td>
+    </tr>
+    <tr>
+      <th>2023-11-16</th>
+      <td>311.858780</td>
+      <td>131</td>
+      <td>112.234603</td>
+    </tr>
+    <tr>
+      <th>2023-11-17</th>
+      <td>67.839693</td>
+      <td>46</td>
+      <td>112.726231</td>
+    </tr>
+    <tr>
+      <th>2023-11-18</th>
+      <td>81.310196</td>
+      <td>13</td>
+      <td>133.770630</td>
+    </tr>
+    <tr>
+      <th>2023-11-19</th>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2023-11-20</th>
+      <td>49.242107</td>
+      <td>17</td>
+      <td>182.355458</td>
+    </tr>
+    <tr>
+      <th>2023-11-21</th>
+      <td>194.918099</td>
+      <td>99</td>
+      <td>202.287672</td>
+    </tr>
+    <tr>
+      <th>2023-11-22</th>
+      <td>46.366550</td>
+      <td>38</td>
+      <td>216.613150</td>
+    </tr>
+    <tr>
+      <th>2023-11-23</th>
+      <td>230.654759</td>
+      <td>95</td>
+      <td>219.043814</td>
+    </tr>
+    <tr>
+      <th>2023-11-24</th>
+      <td>14.056912</td>
+      <td>11</td>
+      <td>234.701554</td>
+    </tr>
+    <tr>
+      <th>2023-11-25</th>
+      <td>129.329768</td>
+      <td>47</td>
+      <td>47.328096</td>
+    </tr>
+    <tr>
+      <th>2023-11-26</th>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2023-11-27</th>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2023-11-28</th>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2023-11-29</th>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2023-11-30</th>
+      <td>486.677641</td>
+      <td>221</td>
+      <td>1.449643</td>
+    </tr>
+    <tr>
+      <th>2023-12-01</th>
+      <td>546.862815</td>
+      <td>219</td>
+      <td>1.701504</td>
+    </tr>
+    <tr>
+      <th>2023-12-02</th>
+      <td>521.007314</td>
+      <td>229</td>
+      <td>1.404731</td>
+    </tr>
+    <tr>
+      <th>2023-12-03</th>
+      <td>581.825438</td>
+      <td>239</td>
+      <td>1.504573</td>
+    </tr>
+    <tr>
+      <th>2023-12-04</th>
+      <td>565.427681</td>
+      <td>227</td>
+      <td>1.763960</td>
+    </tr>
+    <tr>
+      <th>2023-12-05</th>
+      <td>599.353015</td>
+      <td>236</td>
+      <td>1.796004</td>
+    </tr>
+    <tr>
+      <th>2023-12-06</th>
+      <td>680.006079</td>
+      <td>254</td>
+      <td>2.553949</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>It is also given extra information in the table below where the last 30 days are assessed for products syncronized from KSAT.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>size</th>
+      <th>number</th>
+      <th>timeliness</th>
+    </tr>
+    <tr>
+      <th>day</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2023-11-07</th>
+      <td>73.725931</td>
+      <td>59</td>
+      <td>0.806074</td>
+    </tr>
+    <tr>
+      <th>2023-11-08</th>
+      <td>56.199789</td>
+      <td>52</td>
+      <td>0.690932</td>
+    </tr>
+    <tr>
+      <th>2023-11-09</th>
+      <td>71.592676</td>
+      <td>75</td>
+      <td>0.674928</td>
+    </tr>
+    <tr>
+      <th>2023-11-10</th>
+      <td>71.177996</td>
+      <td>59</td>
+      <td>0.662549</td>
+    </tr>
+    <tr>
+      <th>2023-11-11</th>
+      <td>57.791104</td>
+      <td>45</td>
+      <td>0.779619</td>
+    </tr>
+    <tr>
+      <th>2023-11-12</th>
+      <td>84.455101</td>
+      <td>72</td>
+      <td>0.771927</td>
+    </tr>
+    <tr>
+      <th>2023-11-13</th>
+      <td>54.575141</td>
+      <td>60</td>
+      <td>0.618561</td>
+    </tr>
+    <tr>
+      <th>2023-11-14</th>
+      <td>76.708853</td>
+      <td>70</td>
+      <td>0.669404</td>
+    </tr>
+    <tr>
+      <th>2023-11-15</th>
+      <td>81.214168</td>
+      <td>70</td>
+      <td>0.772807</td>
+    </tr>
+    <tr>
+      <th>2023-11-16</th>
+      <td>75.207100</td>
+      <td>68</td>
+      <td>0.662448</td>
+    </tr>
+    <tr>
+      <th>2023-11-17</th>
+      <td>78.184278</td>
+      <td>66</td>
+      <td>0.689080</td>
+    </tr>
+    <tr>
+      <th>2023-11-18</th>
+      <td>53.726294</td>
+      <td>54</td>
+      <td>0.580928</td>
+    </tr>
+    <tr>
+      <th>2023-11-19</th>
+      <td>73.625401</td>
+      <td>58</td>
+      <td>0.764443</td>
+    </tr>
+    <tr>
+      <th>2023-11-20</th>
+      <td>55.945775</td>
+      <td>51</td>
+      <td>0.686385</td>
+    </tr>
+    <tr>
+      <th>2023-11-21</th>
+      <td>69.311962</td>
+      <td>36</td>
+      <td>0.554235</td>
+    </tr>
+    <tr>
+      <th>2023-11-22</th>
+      <td>71.706136</td>
+      <td>58</td>
+      <td>0.673368</td>
+    </tr>
+    <tr>
+      <th>2023-11-23</th>
+      <td>57.565743</td>
+      <td>44</td>
+      <td>0.811575</td>
+    </tr>
+    <tr>
+      <th>2023-11-24</th>
+      <td>81.103828</td>
+      <td>60</td>
+      <td>0.809681</td>
+    </tr>
+    <tr>
+      <th>2023-11-25</th>
+      <td>54.540347</td>
+      <td>59</td>
+      <td>0.619887</td>
+    </tr>
+    <tr>
+      <th>2023-11-26</th>
+      <td>76.018935</td>
+      <td>69</td>
+      <td>0.670055</td>
+    </tr>
+    <tr>
+      <th>2023-11-27</th>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2023-11-28</th>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2023-11-29</th>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2023-11-30</th>
+      <td>44.222555</td>
+      <td>53</td>
+      <td>0.546826</td>
+    </tr>
+    <tr>
+      <th>2023-12-01</th>
+      <td>73.777495</td>
+      <td>59</td>
+      <td>0.812562</td>
+    </tr>
+    <tr>
+      <th>2023-12-02</th>
+      <td>55.236019</td>
+      <td>53</td>
+      <td>0.663210</td>
+    </tr>
+    <tr>
+      <th>2023-12-03</th>
+      <td>76.974418</td>
+      <td>76</td>
+      <td>0.673558</td>
+    </tr>
+    <tr>
+      <th>2023-12-04</th>
+      <td>50.226574</td>
+      <td>38</td>
+      <td>0.676961</td>
+    </tr>
+    <tr>
+      <th>2023-12-05</th>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>2023-12-06</th>
+      <td>30.371363</td>
+      <td>30</td>
+      <td>0.682418</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="summary.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Quick summary</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="S2L1C_portals.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Sentinel-2 Level-1C products</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#products-on-portals">Products on portals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-products">Missing products</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-ingestion">Data ingestion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MET Norway - NBS team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+This Report is part of the NBS project.
+<br>
+The Norwegian Space Agency is not responsible in any way for the content of this document.
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
