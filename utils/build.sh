@@ -15,13 +15,13 @@ current_date=$(date +"%Y-%m-%d")
 mkdir -p "$destination"
 
 # Build the PDF report
-jb build $book --builder pdflatex
+jb build $book --all --builder pdflatex
 sleep 5
 
 # Check if the source PDF file exists, then move and rename it
 if [ -f "${source_pdf}month.pdf" ]; then
     current_date=$(date +"%Y-%m-%d")
-    mv "${source_pdf}month.pdf" "${destination}report_${current_date}.pdf"
+    mv "${source_pdf}month.pdf" "${destination}NBS_monthly_report_${current_date}.pdf"
 else
     echo "The source PDF file does not exist."
 fi
@@ -30,11 +30,11 @@ fi
 source $current_dir/create_markdown_list_of_reports.sh
 
 # Building again to include the link to the new PDF report
-jb build $book --builder pdflatex
+jb build $book --all --builder pdflatex
 sleep 5
 if [ -f "${source_pdf}month.pdf" ]; then
     current_date=$(date +"%Y-%m-%d")
-    mv "${source_pdf}month.pdf" "${destination}report_${current_date}.pdf"
+    mv "${source_pdf}month.pdf" "${destination}NBS_monthly_report_${current_date}.pdf"
 else
     echo "The source PDF file does not exist."
 fi
