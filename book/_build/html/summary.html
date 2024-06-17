@@ -345,30 +345,6 @@ document.write(`
 <h1>Quick summary<a class="headerlink" href="#quick-summary" title="Permalink to this heading">#</a></h1>
 <p>The table below shows a short overview of the NBS preformance operation during the last 30 days. The three different FEs and the BE are included. All columns represents the number of products in each portal excepting the last 3 columns. Those 3 columns represents the data flow from MET Norway to users through the portals where Volumes are measured in Tb.</p>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">/tmp/ipykernel_32123/1792926152.py</span> in <span class="ni">?</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span>             <span class="n">data_clean</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;colhub_aoi&#39;</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span>         <span class="k">if</span> <span class="n">data_BE</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span>             <span class="n">data_BE</span> <span class="o">=</span> <span class="n">data_clean</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span>         <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">37</span>             <span class="n">data_BE</span> <span class="o">=</span> <span class="n">data_BE</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data_clean</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span> 
-<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data_FE</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">data_BE</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sensing_date&#39;</span><span class="p">,</span> <span class="s1">&#39;product&#39;</span><span class="p">,</span> <span class="s1">&#39;area&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="n">data</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;sensing_date&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="nn">~/anaconda3/lib/python3.11/site-packages/pandas/core/generic.py</span> in <span class="ni">?</span><span class="nt">(self, name)</span>
-<span class="g g-Whitespace">   </span><span class="mi">6200</span>             <span class="ow">and</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_accessors</span>
-<span class="g g-Whitespace">   </span><span class="mi">6201</span>             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_info_axis</span><span class="o">.</span><span class="n">_can_hold_identifiers_and_holds_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">6202</span>         <span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">6203</span>             <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
-<span class="ne">-&gt; </span><span class="mi">6204</span>         <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: &#39;DataFrame&#39; object has no attribute &#39;append&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -389,41 +365,41 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-center"><p><a class="reference external" href="http://colhub.met.no">colhub.met.no</a></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="pasted-text">8459</span></p></td>
+<td class="text-center"><p><span class="pasted-text">39989</span></p></td>
+<td class="text-center"><p><span class="pasted-text">40225</span></p></td>
+<td class="text-center"><p><span class="pasted-text">37358</span></p></td>
+<td class="text-center"><p><span class="pasted-text">15268</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0.000</span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p><a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="pasted-text">8487</span></p></td>
+<td class="text-center"><p><span class="pasted-text">39754</span></p></td>
+<td class="text-center"><p><span class="pasted-text">34935</span></p></td>
+<td class="text-center"><p><span class="pasted-text">35658</span></p></td>
+<td class="text-center"><p><span class="pasted-text">15245</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0.000</span></p></td>
 </tr>
 <tr class="row-even"><td class="text-center"><p><a class="reference external" href="http://scihub.copernicus.eu">scihub.copernicus.eu</a></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
 <td class="text-center"><p>-</p></td>
 <td class="text-center"><p>-</p></td>
 <td class="text-center"><p>-</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p>MET Norway BE</p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
-<td class="text-center"><p></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">0</span></p></td>
 <td class="text-center"><p>-</p></td>
 <td class="text-center"><p>-</p></td>
 <td class="text-center"><p>-</p></td>
@@ -431,10 +407,16 @@ document.write(`
 </tbody>
 </table>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>Finally, the total amount of disk space dedicated to the NBS project, including either products in SAFE and NetCDF formats, represents 5620 Tb.</p>
+</div>
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>Due to tracking the data ingested and produced for the NBS project in the last year it is possible to forcast the upcoming need for disk space. As long as data flows follows the same pattern than last year, in 6 months the total disk space will grow until 6596 Tb; while in 12 months it is forecasted to become 6899 Tb.</p>
+</div>
 </div>
 </section>
 
