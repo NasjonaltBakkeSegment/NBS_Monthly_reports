@@ -373,65 +373,78 @@ document.write(`
 <p>The same data is also represented below, with a difference. This time the data is not accounted by numer, but by volume. Although both graphs show similar trends, they are not exactly equal due to the variability in the ratio volume per product. For instance, the seasonality of optical products could have an impact in the total volume of products.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/core/indexes/base.py:3791,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3790</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3791</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3792</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">File index.pyx:152,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">File index.pyx:181,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7080,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
-
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7088,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
-
-<span class="ne">KeyError</span>: &#39;size&#39;
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Volume downloaded per day (in Tb)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">total</span> <span class="o">=</span> <span class="n">nbs_global</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">nbs_global</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">date</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">total</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Volume downloaded in Tb&#39;</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">70</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/core/frame.py:3893,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3891</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3892</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3893</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3894</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">3895</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/pandas/core/indexes/base.py:3798,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3793</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">3794</span>         <span class="nb">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span> <span class="n">abc</span><span class="o">.</span><span class="n">Iterable</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3795</span>         <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3796</span>     <span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">3797</span>         <span class="k">raise</span> <span class="n">InvalidIndexError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3798</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3799</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3800</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3801</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3802</span>     <span class="c1">#  the TypeError.</span>
-<span class="g g-Whitespace">   </span><span class="mi">3803</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-
-<span class="ne">KeyError</span>: &#39;size&#39;
-</pre></div>
-</div>
+<img alt="_images/ebd49cfb24b1d49611b5f0a9c2fc71c4aa09ab79944ba382ddebf14e738f7e4a.png" src="_images/ebd49cfb24b1d49611b5f0a9c2fc71c4aa09ab79944ba382ddebf14e738f7e4a.png" />
 </div>
 </div>
 <p>The table below is also interesting. It shows the amount of products downloaded for each the different Sentinel products. As expected, S1 and S2 are the most used Sentinels. S3 is slightly used, while S5p is not used.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>satellite  product_type   
+S1         GRDH                237941
+           GRDM                102492
+           OCN                  79543
+           RAW                 196349
+           SLC                  62779
+S2         MSIL1C              468156
+           MSIL1C_DTERRENG       3100
+           MSIL2A             1012524
+S3         OLCI_L1               6919
+           OLCI_L2                490
+           SLSTR_L1              5907
+           SLSTR_L2                 9
+           SRAL_L1                 23
+           SRAL_L2                 83
+           SYN_L2                  39
+S5         NRTI_L2               5807
+           OFFL_L1B                 3
+           OFFL_L2                  6
+dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <p>The following table shows the total downloaded volume of data in Tb per month. Here the seasonality of some Sentinel products can affect the final numbers.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>download_time  download_time
+2021           10                 7.588303
+               11               158.654049
+               12                57.675128
+2022           1                 36.406545
+               2                 29.798405
+               3                 39.869718
+               4                 46.768604
+               5                 51.219186
+               6                 42.277098
+               7                 44.565096
+               8                 42.852304
+               9                 47.447532
+               10                60.491409
+               11               141.031091
+               12                50.957670
+2023           1                 48.169138
+               2                 41.604374
+               3                 61.866205
+               4                 74.137962
+               5                 25.676479
+               6                 54.858885
+               7                 78.211367
+               8                 88.075235
+               9                 80.195622
+               10                54.828457
+               11                33.878596
+               12                10.909848
+2024           1                  3.645265
+Name: size, dtype: float64
+</pre></div>
+</div>
+</div>
 </div>
 <p>The number of users accessing and using the datahub is also important to be known. The plot below show the number of users per day. Some variability is represented in its numbers. Nevertheless, <a class="reference external" href="http://colhub.met.no">colhub.met.no</a> is used by 15 to 20 users per day.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/8992b32d528063f26caf38a49bd249f50b7ffe174bd6521fe5c56bf5642c57f2.png" src="_images/8992b32d528063f26caf38a49bd249f50b7ffe174bd6521fe5c56bf5642c57f2.png" />
+</div>
 </div>
 </section>
 <section id="portal-colhub-archive-met-no">
@@ -440,18 +453,79 @@ document.write(`
 </div>
 <p>Similar to <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>, here it is presented the performance of <a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a>. First the number of products downloaded per day. As shown in the plot below, some days the number of products downloaded is null. This is a correct value which is not reflecting the performance of the FE. The archive is not as frequently accessed as <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>. Only those users looking for historical data will used this portal.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/e41c794114318100acb536803531cea7a8d3be844bea4dfdd6b12a2cf7212ffe.png" src="_images/e41c794114318100acb536803531cea7a8d3be844bea4dfdd6b12a2cf7212ffe.png" />
+</div>
 </div>
 <p>As explained and shown in the previous section, the total volume downloaded is also shown in the graphic below.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;size&#39;, &#39;download_duration&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+<img alt="_images/08905492eadbad019ff72fbaab05f25cfbd2a548f48ffd890199b65b25c1c82a.png" src="_images/08905492eadbad019ff72fbaab05f25cfbd2a548f48ffd890199b65b25c1c82a.png" />
+</div>
 </div>
 <p>It is still interesting to see the number of products downloaded per product type. As shown in the previous section, S1 and S2 still are the most popular Sentinels.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>satellite  product_type   
+S1         GRDH               31284
+           GRDM                7755
+           OCN                    1
+           RAW                    3
+           SLC                 3219
+S2         MSIL1C             34518
+           MSIL1C_DTERRENG    16832
+           MSIL2A             43148
+S3         OLCI_L1                1
+           SLSTR_L1               2
+           SRAL_L1                4
+           SRAL_L2              158
+S5         OFFL_L2                1
+dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 <p>The table below shows the monthly retrieved volume of data in Tb.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>download_time  download_time
+2021           December          0.000696
+               November          0.005186
+2022           April             0.858194
+               August            0.874257
+               December          2.247264
+               February          9.514969
+               January           7.210722
+               July              0.771705
+               June              3.787335
+               March            13.999207
+               May               2.258999
+               November          0.011412
+               October           0.030705
+               September         0.289683
+2023           April             5.010196
+               August            1.931697
+               February         14.316868
+               January           0.417223
+               July              3.804772
+               June              2.082679
+               March            27.805556
+               May               0.196331
+               October           0.276372
+               September         0.220003
+Name: size, dtype: float64
+</pre></div>
+</div>
+</div>
 </div>
 <p>The last graphic show the number of users accessing and downloading data from the portal. Again, the discontinuity in numbers of users it is not a sign of the portal performance.</p>
 <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/7cd8ba188a5266d8ede0628c4fcfd4ba6ca5eb6f5741dfbb988a5d7dd09f82ce.png" src="_images/7cd8ba188a5266d8ede0628c4fcfd4ba6ca5eb6f5741dfbb988a5d7dd09f82ce.png" />
+</div>
 </div>
 </section>
 </section>
