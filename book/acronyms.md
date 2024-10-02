@@ -22,6 +22,9 @@ Here follows a formatted list of acronyms.
 
 **MET Norway**
     Meteorological Institute of Norway
+    
+**CDSE**
+    Copernicus Data Space Ecosystem
 
 **S1**
     Sentinel-1

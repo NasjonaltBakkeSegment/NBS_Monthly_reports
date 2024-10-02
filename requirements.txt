@@ -1,3 +1,5 @@
 yq
 cartopy
 pyppeteer
+pyyaml
+matplotlib

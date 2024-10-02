@@ -1,0 +1,13 @@
+color1: xkcd:sea blue
+color2: xkcd:brick red
+color3: xkcd:olive green
+color4: xkcd:gold
+color5: xkcd:sea blue
+fig_dims:
+  height: 6
+  width: 12
+font_size:
+  axis_labels: 10
+  tick_labels: 8
+  legend: 9
+  default: 9
