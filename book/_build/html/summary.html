@@ -347,20 +347,6 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">39</span>
-<span class="g g-Whitespace">     </span><span class="mi">37</span> <span class="n">col_use</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nbs_30</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="n">col_nb</span> <span class="o">=</span> <span class="n">nbs_30</span><span class="o">.</span><span class="n">count</span><span class="p">()[</span><span class="s1">&#39;product_type&#39;</span><span class="p">]</span>
-<span class="ne">---&gt; </span><span class="mi">39</span> <span class="n">col_vol</span> <span class="o">=</span> <span class="n">nbs_30</span><span class="o">.</span><span class="n">sum</span><span class="p">()[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span> <span class="c1">#in Tb</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span> <span class="n">csvfile</span> <span class="o">=</span> <span class="n">logsdir</span> <span class="o">/</span> <span class="s1">&#39;NBS_frontend-AOI_outputs.csv&#39;</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="n">nbs_AOI</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
-
-<span class="ne">TypeError</span>: unsupported operand type(s) for /: &#39;str&#39; and &#39;int&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -379,30 +365,30 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-center"><p><a class="reference external" href="http://colhub.met.no">colhub.met.no</a></p></td>
-<td class="text-center"><p><span class="pasted-text">8567</span></p></td>
-<td class="text-center"><p><span class="pasted-text">35878</span></p></td>
-<td class="text-center"><p><span class="pasted-text">35294</span></p></td>
-<td class="text-center"><p><span class="pasted-text">28917</span></p></td>
-<td class="text-center"><p><span class="pasted-text">15171</span></p></td>
-<td class="text-center"><p><span class="pasted-text">0</span></p></td>
-<td class="text-center"><p><span class="pasted-text">0</span></p></td>
-<td class="text-center"><p><span class="pasted-text">0.000</span></p></td>
+<td class="text-center"><p><span class="pasted-text">8738</span></p></td>
+<td class="text-center"><p><span class="pasted-text">35186</span></p></td>
+<td class="text-center"><p><span class="pasted-text">34665</span></p></td>
+<td class="text-center"><p><span class="pasted-text">28699</span></p></td>
+<td class="text-center"><p><span class="pasted-text">14717</span></p></td>
+<td class="text-center"><p><span class="pasted-text">17</span></p></td>
+<td class="text-center"><p><span class="pasted-text">26000</span></p></td>
+<td class="text-center"><p><span class="pasted-text">13.417</span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p><a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a></p></td>
-<td class="text-center"><p><span class="pasted-text">8574</span></p></td>
-<td class="text-center"><p><span class="pasted-text">35632</span></p></td>
-<td class="text-center"><p><span class="pasted-text">35051</span></p></td>
-<td class="text-center"><p><span class="pasted-text">28634</span></p></td>
-<td class="text-center"><p><span class="pasted-text">15158</span></p></td>
-<td class="text-center"><p><span class="pasted-text">0</span></p></td>
-<td class="text-center"><p><span class="pasted-text">0</span></p></td>
-<td class="text-center"><p><span class="pasted-text">0.000</span></p></td>
+<td class="text-center"><p><span class="pasted-text">8745</span></p></td>
+<td class="text-center"><p><span class="pasted-text">34940</span></p></td>
+<td class="text-center"><p><span class="pasted-text">34423</span></p></td>
+<td class="text-center"><p><span class="pasted-text">28409</span></p></td>
+<td class="text-center"><p><span class="pasted-text">14702</span></p></td>
+<td class="text-center"><p><span class="pasted-text">17</span></p></td>
+<td class="text-center"><p><span class="pasted-text">3675</span></p></td>
+<td class="text-center"><p><span class="pasted-text">2.384</span></p></td>
 </tr>
 <tr class="row-even"><td class="text-center"><p><a class="reference external" href="http://dataspace.copernicus.eu">dataspace.copernicus.eu</a></p></td>
-<td class="text-center"><p><span class="pasted-text">0</span></p></td>
-<td class="text-center"><p><span class="pasted-text">0</span></p></td>
-<td class="text-center"><p><span class="pasted-text">0</span></p></td>
-<td class="text-center"><p><span class="pasted-text">0</span></p></td>
+<td class="text-center"><p><span class="pasted-text">9540</span></p></td>
+<td class="text-center"><p><span class="pasted-text">35059</span></p></td>
+<td class="text-center"><p><span class="pasted-text">35059</span></p></td>
+<td class="text-center"><p><span class="pasted-text">41452</span></p></td>
 <td class="text-center"><p><span class="pasted-text">0</span></p></td>
 <td class="text-center"><p></p></td>
 <td class="text-center"><p></p></td>
@@ -412,14 +398,14 @@ document.write(`
 </table>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<p>Finally, the total amount of disk space dedicated to the NBS project, including either products in SAFE and NetCDF formats, represents 5962 Tb.</p>
+<p>Finally, the total amount of disk space dedicated to the NBS project, including either products in SAFE and NetCDF formats, represents 5969 Tb.</p>
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<p>Due to tracking the data ingested and produced for the NBS project in the last year it is possible to forecast the upcoming need for disk space. As long as data flows follows the same pattern than last year, in 6 months the total disk space will grow until 6525 Tb; while in 12 months it is forecast to become 6913 Tb.</p>
+<p>Due to tracking the data ingested and produced for the NBS project in the last year it is possible to forecast the upcoming need for disk space. As long as data flows follows the same pattern than last year, in 6 months the total disk space will grow until 6533 Tb; while in 12 months it is forecast to become 6925 Tb.</p>
 </div>
 </div>
 </section>
