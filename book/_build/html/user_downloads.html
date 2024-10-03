@@ -367,35 +367,35 @@ document.write(`
 <p>The first portal to analyze is <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>. The target of the analysis is to check the amount of data downloaded by users, but also the number of users accessing the datahub. Below the historical amount of data per day is represented.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/fdff2260958cde93f2115fd42a9e4bda5089c6b037364471cd3ce00f34d4a392.png" src="_images/fdff2260958cde93f2115fd42a9e4bda5089c6b037364471cd3ce00f34d4a392.png" />
+<img alt="_images/56c6f59021496ac32000d547aec3020446d7331d8f2ebcc134b4768538baf52b.png" src="_images/56c6f59021496ac32000d547aec3020446d7331d8f2ebcc134b4768538baf52b.png" />
 </div>
 </div>
 <p>The same data is also represented below, with a difference. This time the data is not accounted by number, but by volume. Although both graphs show similar trends, they are not exactly equal due to the variability in the ratio volume per product. For instance, the seasonality of optical products could have an impact in the total volume of products.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/f35f4f98dded76e9dc80e717af163c50dd39042084b6825ac9e50c19c28ca0d9.png" src="_images/f35f4f98dded76e9dc80e717af163c50dd39042084b6825ac9e50c19c28ca0d9.png" />
+<img alt="_images/2717d77e8580e4f76ba084ede288f9411cdac48af4218d175c4d932104c87d94.png" src="_images/2717d77e8580e4f76ba084ede288f9411cdac48af4218d175c4d932104c87d94.png" />
 </div>
 </div>
 <p>The table below is also interesting. It shows the amount of products downloaded for each the different Sentinel products. As expected, S1 and S2 are the most used Sentinels. S3 is slightly used, while S5p is not used.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>satellite  product_type   
-S1         GRDH                247437
-           GRDM                116220
-           OCN                 103579
+S1         GRDH                248717
+           GRDM                118343
+           OCN                 106793
            RAW                 196353
-           SLC                  62838
-S2         MSIL1C              571859
+           SLC                  62845
+S2         MSIL1C              588447
            MSIL1C_DTERRENG       3100
-           MSIL2A             1140577
-S3         OLCI_L1               9055
+           MSIL2A             1143757
+S3         OLCI_L1               9326
            OLCI_L2                490
-           SLSTR_L1             15576
+           SLSTR_L1             16411
            SLSTR_L2                12
            SRAL_L1                 23
            SRAL_L2                 85
            SYN_L2                  41
-S5         NRTI_L2              10306
+S5         NRTI_L2              10861
            OFFL_L1B                 3
            OFFL_L2                 11
 dtype: int64
@@ -441,7 +441,8 @@ dtype: int64
                5                 19.999434
                6                 15.003660
                7                 14.552019
-               8                 15.172892
+               8                 16.372706
+               9                 13.028849
 Name: size, dtype: float64
 </pre></div>
 </div>
@@ -450,7 +451,7 @@ Name: size, dtype: float64
 <p>The number of users accessing and using the datahub is also important to be known. The plot below show the number of users per day. Some variability is represented in its numbers. Nevertheless, <a class="reference external" href="http://colhub.met.no">colhub.met.no</a> is used by 15 to 20 users per day.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/fff725b12557f8386b7522ea5e66071a956a573852761b3d88acf8d0ad484b1c.png" src="_images/fff725b12557f8386b7522ea5e66071a956a573852761b3d88acf8d0ad484b1c.png" />
+<img alt="_images/835f764e576b65da83c25c03f21d90c9ff5a8ea2881e8726aa1fbeaa8d020499.png" src="_images/835f764e576b65da83c25c03f21d90c9ff5a8ea2881e8726aa1fbeaa8d020499.png" />
 </div>
 </div>
 </section>
@@ -461,7 +462,7 @@ Name: size, dtype: float64
 <p>Similar to <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>, here it is presented the performance of <a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a>. First the number of products downloaded per day. As shown in the plot below, some days the number of products downloaded is null. This is a correct value which is not reflecting the performance of the FE. The archive is not as frequently accessed as <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>. Only those users looking for historical data will used this portal.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/2f407f80bf9e6b21a4dfb4a406a4d1de90a8632dbe6f41cc84ed72c2f5ae84c7.png" src="_images/2f407f80bf9e6b21a4dfb4a406a4d1de90a8632dbe6f41cc84ed72c2f5ae84c7.png" />
+<img alt="_images/a948b7137252cb940affe0144e98863e85b4dc47ece5362a8e0291f8ada15d33.png" src="_images/a948b7137252cb940affe0144e98863e85b4dc47ece5362a8e0291f8ada15d33.png" />
 </div>
 </div>
 <p>As explained and shown in the previous section, the total volume downloaded is also shown in the graphic below.</p>
@@ -470,21 +471,21 @@ Name: size, dtype: float64
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;size&#39;, &#39;download_duration&#39;], dtype=&#39;object&#39;)
 </pre></div>
 </div>
-<img alt="_images/5bd34bada18fe8b94e1c272559a6eb60dbdf3f2f317c4736262a38bffc8d5a50.png" src="_images/5bd34bada18fe8b94e1c272559a6eb60dbdf3f2f317c4736262a38bffc8d5a50.png" />
+<img alt="_images/e09a147fabf14712367cae630ed920288924323a21e39e08730ff8a61d7796ff.png" src="_images/e09a147fabf14712367cae630ed920288924323a21e39e08730ff8a61d7796ff.png" />
 </div>
 </div>
 <p>It is still interesting to see the number of products downloaded per product type. As shown in the previous section, S1 and S2 still are the most popular Sentinels.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>satellite  product_type   
-S1         GRDH               32308
-           GRDM               10209
+S1         GRDH               32424
+           GRDM               10511
            OCN                    1
            RAW                  875
            SLC                 3221
-S2         MSIL1C             34642
+S2         MSIL1C             34662
            MSIL1C_DTERRENG    16832
-           MSIL2A             63480
+           MSIL2A             66710
 S3         OLCI_L1                4
            OLCI_L2                1
            SLSTR_L1            4022
@@ -525,12 +526,13 @@ dtype: int64
                October           0.276372
                September         0.220003
 2024           April             3.181320
-               August            3.264419
+               August            3.355430
                February          1.177107
                July              3.158623
                June              4.358417
                March             2.230899
                May               0.761791
+               September         2.295378
 Name: size, dtype: float64
 </pre></div>
 </div>
@@ -539,7 +541,7 @@ Name: size, dtype: float64
 <p>The last graphic show the number of users accessing and downloading data from the portal. Again, the discontinuity in numbers of users it is not a sign of the portal performance.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/99d7509cad6358534ab0f72e9e42a0723903fc56876e90e7e27a8acdfefe7e36.png" src="_images/99d7509cad6358534ab0f72e9e42a0723903fc56876e90e7e27a8acdfefe7e36.png" />
+<img alt="_images/9b48a5eec2c628cff7b3e43f9bdc1ce9f1842317bc43aae3e6a46711852ef372.png" src="_images/9b48a5eec2c628cff7b3e43f9bdc1ce9f1842317bc43aae3e6a46711852ef372.png" />
 </div>
 </div>
 </section>
