@@ -6,6 +6,7 @@ import matplotlib.dates as mdates
 import copy
 import os
 import yaml
+import calendar
 
 config_path = os.path.abspath('../config/params.yaml')
 with open(config_path, 'r') as file:
@@ -227,3 +228,17 @@ def plot_stats_simple(df, plot_max=False):
     fig.autofmt_xdate()
     plt.grid(True)
     plt.show()
+
+def get_year_and_month():
+    config_path = os.path.abspath('../config/report_month.yaml')
+    with open(config_path, 'r') as file:
+        date = yaml.safe_load(file)
+    year = int(date['year'])
+    month = int(date['month'])
+    return year, month
+
+def get_month_name(month):
+    if 1 <= month <= 12:
+        return calendar.month_name[month]
+    else:
+        return "Invalid month number"

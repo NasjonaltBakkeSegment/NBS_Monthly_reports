@@ -1,2 +1,5 @@
 csv_locations.yaml
 NBS_frontend-global_outputs.csv
+#*.ipynb_checkpoints*
+#*_pycache_*
+build_all_reports_2024.sh

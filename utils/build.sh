@@ -8,8 +8,17 @@ source_pdf="$current_dir/../book/_build/latex/"
 destination="$current_dir/../reports/"
 book="$current_dir/../book/"
 
-# Store today's date in a variable
-current_date=$(date +"%Y-%m-%d")
+# Check if both year and month arguments are passed
+if [ -z "$1" ] || [ -z "$2" ]; then
+    echo "Error: No year or month argument passed to build.sh."
+    exit 1
+fi
+
+# Assign the arguments to variables
+year="$1"
+month="$2"
+
+echo "Building report for year: $year and month: $month"
 
 # Create the destination directory if it doesn't exist
 mkdir -p "$destination"
@@ -20,8 +29,7 @@ sleep 5
 
 # Check if the source PDF file exists, then move and rename it
 if [ -f "${source_pdf}month.pdf" ]; then
-    current_date=$(date +"%Y-%m-%d")
-    mv "${source_pdf}month.pdf" "${destination}NBS_monthly_report_${current_date}.pdf"
+    mv "${source_pdf}month.pdf" "${destination}NBS_monthly_report_${year}_${month}.pdf"
 else
     echo "The source PDF file does not exist."
 fi
@@ -33,8 +41,7 @@ source $current_dir/create_markdown_list_of_reports.sh
 jb build $book --all --builder pdflatex
 sleep 5
 if [ -f "${source_pdf}month.pdf" ]; then
-    current_date=$(date +"%Y-%m-%d")
-    mv "${source_pdf}month.pdf" "${destination}NBS_monthly_report_${current_date}.pdf"
+    mv "${source_pdf}month.pdf" "${destination}NBS_monthly_report_${year}_${month}.pdf"
 else
     echo "The source PDF file does not exist."
 fi

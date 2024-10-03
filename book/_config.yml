@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: NBS monthly report
+title: NBS monthly report - 2024 January
 author: MET Norway - NBS team
 #logo: logo.jpg
 
@@ -15,6 +15,17 @@ execute:
 latex:
   latex_documents:
     targetname: month.tex
+  latex_elements:
+    maketitle: |
+      \begin{titlepage}
+      \centering
+      \vspace*{2cm}
+      {\Huge \textbf{\thetitle}\par}
+      \vspace{1.5cm}
+      {\Large \textbf{\theauthor}\par}
+      \vfill
+      % Omit the date here
+      \end{titlepage}
 
 # Add a bibtex file so that we can create citations
 #bibtex_bibfiles:
