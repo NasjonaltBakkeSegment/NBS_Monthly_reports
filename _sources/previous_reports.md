@@ -9,4 +9,5 @@ Below is a list of previous reports. If viewing the HTML version of this report 
 * [NBS_monthly_report_2024_06.pdf](../reports/NBS_monthly_report_2024_06.pdf)
 * [NBS_monthly_report_2024_07.pdf](../reports/NBS_monthly_report_2024_07.pdf)
 * [NBS_monthly_report_2024_08.pdf](../reports/NBS_monthly_report_2024_08.pdf)
+* [NBS_monthly_report_2024_09.pdf](../reports/NBS_monthly_report_2024_09.pdf)
 
