@@ -19,3 +19,6 @@ To publish the HTML report to GitHub pages you need ghp-import
 ```
 sudo apt install ghp-import
 ``````
+
+The latest version of the report can be found here:
+https://nasjonaltbakkesegment.github.io/NBS_monthly_reports
