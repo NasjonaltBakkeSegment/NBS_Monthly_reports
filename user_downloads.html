@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Monitoring data downloads from colhub portals &#8212; NBS monthly report - 2024 January</title>
+    <title>Monitoring data downloads from colhub portals &#8212; NBS monthly report - 2024 February</title>
   
   
   
@@ -149,7 +149,7 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    <p class="title logo__title">NBS monthly report - 2024 January</p>
+    <p class="title logo__title">NBS monthly report - 2024 February</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -367,35 +367,35 @@ document.write(`
 <p>The first portal to analyze is <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>. The target of the analysis is to check the amount of data downloaded by users, but also the number of users accessing the datahub. Below the historical amount of data per day is represented.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/97283b00abac8c81e72067115308117128cfd42ef40bcc1dc30f807658b2e688.png" src="_images/97283b00abac8c81e72067115308117128cfd42ef40bcc1dc30f807658b2e688.png" />
+<img alt="_images/407f3396ad00876bd686ecf29b29f841321ab1ed4a380fb8cbfe7c14077422ab.png" src="_images/407f3396ad00876bd686ecf29b29f841321ab1ed4a380fb8cbfe7c14077422ab.png" />
 </div>
 </div>
 <p>The same data is also represented below, with a difference. This time the data is not accounted by number, but by volume. Although both graphs show similar trends, they are not exactly equal due to the variability in the ratio volume per product. For instance, the seasonality of optical products could have an impact in the total volume of products.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/94b3cddc15ad15a38a18a92dfe9f285730df6221e182e3a8865310c30d15e50a.png" src="_images/94b3cddc15ad15a38a18a92dfe9f285730df6221e182e3a8865310c30d15e50a.png" />
+<img alt="_images/a3398cf8986bae6394a82e7b41be148b412e15a0e4505edb5da049df499ac22c.png" src="_images/a3398cf8986bae6394a82e7b41be148b412e15a0e4505edb5da049df499ac22c.png" />
 </div>
 </div>
 <p>The table below is also interesting. It shows the amount of products downloaded for each the different Sentinel products. As expected, S1 and S2 are the most used Sentinels. S3 is slightly used, while S5p is not used.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>satellite  product_type   
-S1         GRDH                238806
-           GRDM                103145
-           OCN                  80352
-           RAW                 196350
-           SLC                  62782
-S2         MSIL1C              469462
+S1         GRDH                239838
+           GRDM                104380
+           OCN                  85237
+           RAW                 196352
+           SLC                  62792
+S2         MSIL1C              473986
            MSIL1C_DTERRENG       3100
-           MSIL2A             1015974
-S3         OLCI_L1               6966
+           MSIL2A             1035546
+S3         OLCI_L1               7153
            OLCI_L2                490
-           SLSTR_L1              6351
-           SLSTR_L2                 9
+           SLSTR_L1              6930
+           SLSTR_L2                12
            SRAL_L1                 23
            SRAL_L2                 83
            SYN_L2                  39
-S5         NRTI_L2               6061
+S5         NRTI_L2               6439
            OFFL_L1B                 3
            OFFL_L2                  6
 dtype: int64
@@ -434,7 +434,8 @@ dtype: int64
                10                54.828457
                11                33.878596
                12                10.909848
-2024           1                  7.761095
+2024           1                  8.061366
+               2                  9.170225
 Name: size, dtype: float64
 </pre></div>
 </div>
@@ -443,7 +444,7 @@ Name: size, dtype: float64
 <p>The number of users accessing and using the datahub is also important to be known. The plot below show the number of users per day. Some variability is represented in its numbers. Nevertheless, <a class="reference external" href="http://colhub.met.no">colhub.met.no</a> is used by 15 to 20 users per day.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/700a5b56d274c6562b658ed7f6b3ec7297f2f2b359e38efd639b23a33d68208a.png" src="_images/700a5b56d274c6562b658ed7f6b3ec7297f2f2b359e38efd639b23a33d68208a.png" />
+<img alt="_images/e81dac532309ba3aecb664091aed1a812205a71931e5b62bba11afa6c6875fee.png" src="_images/e81dac532309ba3aecb664091aed1a812205a71931e5b62bba11afa6c6875fee.png" />
 </div>
 </div>
 </section>
@@ -454,7 +455,7 @@ Name: size, dtype: float64
 <p>Similar to <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>, here it is presented the performance of <a class="reference external" href="http://colhub-archive.met.no">colhub-archive.met.no</a>. First the number of products downloaded per day. As shown in the plot below, some days the number of products downloaded is null. This is a correct value which is not reflecting the performance of the FE. The archive is not as frequently accessed as <a class="reference external" href="http://colhub.met.no">colhub.met.no</a>. Only those users looking for historical data will used this portal.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/8241f93b06b596c82bf044106bba7b0e33e6cff8b818117ab8f9b7059cd2280a.png" src="_images/8241f93b06b596c82bf044106bba7b0e33e6cff8b818117ab8f9b7059cd2280a.png" />
+<img alt="_images/7a12f8e14222d398dcfc31d503cf000b2f7ccb4f136c05d5aa22f39c7c471f22.png" src="_images/7a12f8e14222d398dcfc31d503cf000b2f7ccb4f136c05d5aa22f39c7c471f22.png" />
 </div>
 </div>
 <p>As explained and shown in the previous section, the total volume downloaded is also shown in the graphic below.</p>
@@ -463,21 +464,21 @@ Name: size, dtype: float64
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;size&#39;, &#39;download_duration&#39;], dtype=&#39;object&#39;)
 </pre></div>
 </div>
-<img alt="_images/a46b7b78b0208d0d7f589878b89c54395238a650a418632ba44e2b81a6a004e2.png" src="_images/a46b7b78b0208d0d7f589878b89c54395238a650a418632ba44e2b81a6a004e2.png" />
+<img alt="_images/3db0476733815a0fd859cc92326bd692949d6abb33465e2ea313887c551717d2.png" src="_images/3db0476733815a0fd859cc92326bd692949d6abb33465e2ea313887c551717d2.png" />
 </div>
 </div>
 <p>It is still interesting to see the number of products downloaded per product type. As shown in the previous section, S1 and S2 still are the most popular Sentinels.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>satellite  product_type   
-S1         GRDH               31284
-           GRDM                7755
+S1         GRDH               31461
+           GRDM                8066
            OCN                    1
-           RAW                    3
+           RAW                  131
            SLC                 3219
-S2         MSIL1C             34518
+S2         MSIL1C             34519
            MSIL1C_DTERRENG    16832
-           MSIL2A             43148
+           MSIL2A             43784
 S3         OLCI_L1                1
            SLSTR_L1               2
            SRAL_L1                4
@@ -516,6 +517,7 @@ dtype: int64
                May               0.196331
                October           0.276372
                September         0.220003
+2024           February          1.096300
 Name: size, dtype: float64
 </pre></div>
 </div>
@@ -524,7 +526,7 @@ Name: size, dtype: float64
 <p>The last graphic show the number of users accessing and downloading data from the portal. Again, the discontinuity in numbers of users it is not a sign of the portal performance.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/d3bd9b332216be45cf2a4d1772163f714685670b988922b17611e243fbd5ac46.png" src="_images/d3bd9b332216be45cf2a4d1772163f714685670b988922b17611e243fbd5ac46.png" />
+<img alt="_images/dd1c25cffc7db3a0a99be00535c06c7a45f32e17158ea4c4fc2773549c5b04dc.png" src="_images/dd1c25cffc7db3a0a99be00535c06c7a45f32e17158ea4c4fc2773549c5b04dc.png" />
 </div>
 </div>
 </section>
